@@ -54,6 +54,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		148088A72AE2AA4500CBE55C /* CheckList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CheckList;
+			sourceTree = "<group>";
+		};
 		14B9ECE62AE11CD200D42922 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +80,7 @@
 		14B9ECF12AE11CD200D42922 /* CollApp */ = {
 			isa = PBXGroup;
 			children = (
+				148088A72AE2AA4500CBE55C /* CheckList */,
 				14B9ECF22AE11CD200D42922 /* CollAppApp.swift */,
 				147161042AE25EEB00AE53D7 /* Model */,
 				147161032AE25ECE00AE53D7 /* ViewModel */,
