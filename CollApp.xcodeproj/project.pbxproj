@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		148088A92AE2ADF500CBE55C /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088A82AE2ADF500CBE55C /* CheckBox.swift */; };
+		148088AB2AE2AE1800CBE55C /* CheckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088AA2AE2AE1800CBE55C /* CheckListView.swift */; };
+		148088AD2AE2AE4900CBE55C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088AC2AE2AE4900CBE55C /* Task.swift */; };
+		148088AF2AE2AE7600CBE55C /* SingleMode_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088AE2AE2AE7600CBE55C /* SingleMode_1.swift */; };
+		148088B12AE2AEA000CBE55C /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088B02AE2AEA000CBE55C /* TaskViewModel.swift */; };
 		14B9ECF32AE11CD200D42922 /* CollAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9ECF22AE11CD200D42922 /* CollAppApp.swift */; };
 		14B9ECF52AE11CD200D42922 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9ECF42AE11CD200D42922 /* ContentView.swift */; };
 		14B9ECF72AE11CD300D42922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B9ECF62AE11CD300D42922 /* Assets.xcassets */; };
@@ -14,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		148088A82AE2ADF500CBE55C /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		148088AA2AE2AE1800CBE55C /* CheckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListView.swift; sourceTree = "<group>"; };
+		148088AC2AE2AE4900CBE55C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		148088AE2AE2AE7600CBE55C /* SingleMode_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMode_1.swift; sourceTree = "<group>"; };
+		148088B02AE2AEA000CBE55C /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		14B9ECEF2AE11CD200D42922 /* CollApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B9ECF22AE11CD200D42922 /* CollAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollAppApp.swift; sourceTree = "<group>"; };
 		14B9ECF42AE11CD200D42922 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				14B9ECF42AE11CD200D42922 /* ContentView.swift */,
+				148088AE2AE2AE7600CBE55C /* SingleMode_1.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -43,6 +54,7 @@
 		147161032AE25ECE00AE53D7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				148088B02AE2AEA000CBE55C /* TaskViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -50,6 +62,7 @@
 		147161042AE25EEB00AE53D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				148088AC2AE2AE4900CBE55C /* Task.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -57,6 +70,8 @@
 		148088A72AE2AA4500CBE55C /* CheckList */ = {
 			isa = PBXGroup;
 			children = (
+				148088A82AE2ADF500CBE55C /* CheckBox.swift */,
+				148088AA2AE2AE1800CBE55C /* CheckListView.swift */,
 			);
 			path = CheckList;
 			sourceTree = "<group>";
@@ -170,7 +185,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				14B9ECF52AE11CD200D42922 /* ContentView.swift in Sources */,
+				148088B12AE2AEA000CBE55C /* TaskViewModel.swift in Sources */,
 				14B9ECF32AE11CD200D42922 /* CollAppApp.swift in Sources */,
+				148088AD2AE2AE4900CBE55C /* Task.swift in Sources */,
+				148088A92AE2ADF500CBE55C /* CheckBox.swift in Sources */,
+				148088AF2AE2AE7600CBE55C /* SingleMode_1.swift in Sources */,
+				148088AB2AE2AE1800CBE55C /* CheckListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
