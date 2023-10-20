@@ -32,6 +32,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		147161022AE25E7000AE53D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14B9ECF42AE11CD200D42922 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		147161032AE25ECE00AE53D7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		147161042AE25EEB00AE53D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		14B9ECE62AE11CD200D42922 = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +74,9 @@
 			isa = PBXGroup;
 			children = (
 				14B9ECF22AE11CD200D42922 /* CollAppApp.swift */,
-				14B9ECF42AE11CD200D42922 /* ContentView.swift */,
+				147161042AE25EEB00AE53D7 /* Model */,
+				147161032AE25ECE00AE53D7 /* ViewModel */,
+				147161022AE25E7000AE53D7 /* View */,
 				14B9ECF62AE11CD300D42922 /* Assets.xcassets */,
 				14B9ECF82AE11CD300D42922 /* Preview Content */,
 			);
