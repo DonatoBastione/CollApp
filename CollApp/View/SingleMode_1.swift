@@ -101,6 +101,7 @@ struct SingleMode_1: View {
                         }
                     }
                     
+                    
                 })
                 .padding(.leading, -150.0)
                 
