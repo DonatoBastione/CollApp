@@ -11,6 +11,9 @@ import SwiftUI
 struct TeamMode_1: View {
     
     @StateObject var viewModel = TeamMemberViewModel()
+    @State var memberName: String = ""
+    @State var image: String = "noimage_plus"
+    
     
     var body: some View {
         
@@ -33,12 +36,49 @@ struct TeamMode_1: View {
                             Text(member.name)
                         }
                     }
-                }.navigationTitle("Boh")
+                    HStack{
+                        Button (action: {
+                            /*Da settare qui il codice per il cambio immagine*/
+                        }, label: {
+                            ZStack{
+                                
+                                Color.gray
+                                Image (image)
+                                    .resizable()
+                                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                    .frame(width: 50.0, height: 50.0)
+                                    .clipped()
+                                
+                                
+                            }.frame(width: 70.0, height: 70.0).clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/).padding(.leading, 0)
+                        })
+                        
+                        
+                        TextField("Team member name", text: $memberName)
+                    }
+                    Text("")
+                    Button(action: {
+                        if(memberName != ""){
+                            viewModel.teamMember.append(TeamMember(name: memberName))
+                        }
+                        memberName = ""
+                    }, label: {
+                        HStack{
+                            Image (systemName: "plus")
+                                .resizable()
+                                .frame (width: 20, height: 20)
+                                .foregroundStyle (Color.yellow)
+                            Text ("Add")
+                        }
+                        
+                        
+                    })
+                }.padding(.leading, 30.0).frame(width: nil)
 
 
-            }
+            }.frame(width: nil).navigationTitle("Team Members")
 
-        }.padding(.trailing, 150.0)
+        }.padding(.trailing, 50.0)
             .padding(.top, 100)
     }
 }

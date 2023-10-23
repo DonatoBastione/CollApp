@@ -26,29 +26,12 @@ struct SingleMode_1: View {
                 
                 VStack {
                     
-                    Button(action: {
-                        if(newTask != ""){
-                            viewModel.tasks.append(Task(text: newTask))
-                            newTask = ""
-                        }
-                    }, label: {
-                        Image (systemName: "plus")
-                            .resizable()
-                            .frame (width: 20, height: 20)
-                            .position(CGPoint(x: 350, y: 9))
-                        
-                            .foregroundStyle (Color.yellow)
-                        
-                        
-                        
-                    })
-                    
                     
                     ZStack{
                         Color.gray //quando si implementa l'immagine questo è da eliminare, ora serve per capire le dimensioni
                         Image ("noimage")
                             .resizable()
-                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                            .aspectRatio(contentMode: .fill)
                             .frame(width: 150.0, height: 150.0)
                             .clipped()
                         
@@ -56,7 +39,7 @@ struct SingleMode_1: View {
                         
                         
                         
-                    }.frame(width: 170.0, height: 170.0).clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                    }.frame(width: 170.0, height: 170.0).clipShape(Circle())
                     
                     TextField("NickName", text: $nickname)
                         .padding([.leading,], 120.0)
@@ -90,7 +73,7 @@ struct SingleMode_1: View {
                     
                     Text("Tasks:")
                         .bold()
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .font(.title)
                     Text(" ")
                     
                     ForEach(viewModel.tasks) {tasks in
@@ -106,8 +89,28 @@ struct SingleMode_1: View {
                 .padding(.leading, -150.0)
                 
                 VStack(alignment: .leading, content: {
-                    TextField("Task:", text: $newTask)
+                    TextField("New Task:", text: $newTask)
+                    
+                    Button(action: {
+                        if(newTask != ""){
+                            viewModel.tasks.append(Task(text: newTask))
+                            newTask = ""
+                        }
+                    }, label: {
+                        HStack{
+                            Image (systemName: "plus")
+                                .resizable()
+                                .frame (width: 20, height: 20)
+                                .foregroundStyle (Color.yellow)
+                            Text ("Add")
+                        }
+                        
+                        
+                    })
+                    
                 }).padding(.leading, 45.0)
+                
+                
                 
                 
                 
