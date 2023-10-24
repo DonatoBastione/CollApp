@@ -19,6 +19,8 @@
 		14B9ECF52AE11CD200D42922 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9ECF42AE11CD200D42922 /* ContentView.swift */; };
 		14B9ECF72AE11CD300D42922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B9ECF62AE11CD300D42922 /* Assets.xcassets */; };
 		14B9ECFA2AE11CD300D42922 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B9ECF92AE11CD300D42922 /* Preview Assets.xcassets */; };
+		65379E1C2AE7BAC5000B8A1A /* TeamMode_Ending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65379E1B2AE7BAC5000B8A1A /* TeamMode_Ending.swift */; };
+		65379E202AE7C8A0000B8A1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65379E1E2AE7C8A0000B8A1A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		14B9ECF42AE11CD200D42922 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		14B9ECF62AE11CD300D42922 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14B9ECF92AE11CD300D42922 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		65379E1B2AE7BAC5000B8A1A /* TeamMode_Ending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMode_Ending.swift; sourceTree = "<group>"; };
+		65379E1E2AE7C8A0000B8A1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 				14B9ECF42AE11CD200D42922 /* ContentView.swift */,
 				148088AE2AE2AE7600CBE55C /* SingleMode_1.swift */,
 				148088B62AE676AD00CBE55C /* TeamMode_1.swift */,
+				65379E1B2AE7BAC5000B8A1A /* TeamMode_Ending.swift */,
+				65379E1E2AE7C8A0000B8A1A /* Assets.xcassets */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14B9ECFA2AE11CD300D42922 /* Preview Assets.xcassets in Resources */,
+				65379E202AE7C8A0000B8A1A /* Assets.xcassets in Resources */,
 				14B9ECF72AE11CD300D42922 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +205,7 @@
 				148088B32AE672BF00CBE55C /* TeamMember.swift in Sources */,
 				14B9ECF32AE11CD200D42922 /* CollAppApp.swift in Sources */,
 				148088AD2AE2AE4900CBE55C /* Task.swift in Sources */,
+				65379E1C2AE7BAC5000B8A1A /* TeamMode_Ending.swift in Sources */,
 				148088A92AE2ADF500CBE55C /* CheckBox.swift in Sources */,
 				148088B52AE6746A00CBE55C /* TeamMemberViewModel.swift in Sources */,
 				148088B72AE676AD00CBE55C /* TeamMode_1.swift in Sources */,
