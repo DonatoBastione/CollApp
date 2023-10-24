@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		066FE8572AE7B732001DE6CF /* SheetAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066FE8562AE7B732001DE6CF /* SheetAvatar.swift */; };
 		148088A92AE2ADF500CBE55C /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088A82AE2ADF500CBE55C /* CheckBox.swift */; };
 		148088AB2AE2AE1800CBE55C /* CheckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088AA2AE2AE1800CBE55C /* CheckListView.swift */; };
 		148088AD2AE2AE4900CBE55C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088AC2AE2AE4900CBE55C /* Task.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		066FE8562AE7B732001DE6CF /* SheetAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetAvatar.swift; sourceTree = "<group>"; };
 		148088A82AE2ADF500CBE55C /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		148088AA2AE2AE1800CBE55C /* CheckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListView.swift; sourceTree = "<group>"; };
 		148088AC2AE2AE4900CBE55C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		147161022AE25E7000AE53D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				066FE8562AE7B732001DE6CF /* SheetAvatar.swift */,
 				14B9ECF42AE11CD200D42922 /* ContentView.swift */,
 				148088AE2AE2AE7600CBE55C /* SingleMode_1.swift */,
 				148088B62AE676AD00CBE55C /* TeamMode_1.swift */,
@@ -197,6 +200,7 @@
 				148088B12AE2AEA000CBE55C /* TaskViewModel.swift in Sources */,
 				148088B32AE672BF00CBE55C /* TeamMember.swift in Sources */,
 				14B9ECF32AE11CD200D42922 /* CollAppApp.swift in Sources */,
+				066FE8572AE7B732001DE6CF /* SheetAvatar.swift in Sources */,
 				148088AD2AE2AE4900CBE55C /* Task.swift in Sources */,
 				148088A92AE2ADF500CBE55C /* CheckBox.swift in Sources */,
 				148088B52AE6746A00CBE55C /* TeamMemberViewModel.swift in Sources */,
