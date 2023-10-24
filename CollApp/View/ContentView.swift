@@ -62,7 +62,8 @@ struct ContentView: View {
             }.padding()
             
             
-            NavigationLink(destination: TeamMode_1()){
+            
+            NavigationLink(destination: TeamMode_alt()){
                 ZStack{
                     Rectangle()
                         .foregroundColor(.clear)

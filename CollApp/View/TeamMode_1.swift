@@ -37,9 +37,9 @@ struct TeamMode_1: View {
                         }
                     }
                     HStack{
-                        Button (action: {
-                            /*Da settare qui il codice per il cambio immagine*/
-                        }, label: {
+                        
+                        
+                        NavigationLink(destination: SheetAvatar()) {
                             ZStack{
                                 
                                 Color.gray
@@ -51,7 +51,8 @@ struct TeamMode_1: View {
                                 
                                 
                             }.frame(width: 70.0, height: 70.0).clipShape(Circle()).padding(.leading, 0)
-                        })
+                        }
+                       
                         
                         
                         TextField("Team member name", text: $memberName)
