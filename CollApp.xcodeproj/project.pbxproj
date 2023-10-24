@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0660780C2AE7E0D100C2B472 /* SingleMode_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066078072AE7E0D100C2B472 /* SingleMode_1.swift */; };
+		0660780D2AE7E0D100C2B472 /* TeamMode_alt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066078082AE7E0D100C2B472 /* TeamMode_alt.swift */; };
+		0660780E2AE7E0D100C2B472 /* SheetAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066078092AE7E0D100C2B472 /* SheetAvatar.swift */; };
+		0660780F2AE7E0D100C2B472 /* TeamMode_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0660780A2AE7E0D100C2B472 /* TeamMode_1.swift */; };
+		066078102AE7E0D100C2B472 /* TeamMode_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0660780B2AE7E0D100C2B472 /* TeamMode_2.swift */; };
 		148088A92AE2ADF500CBE55C /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088A82AE2ADF500CBE55C /* CheckBox.swift */; };
 		148088AB2AE2AE1800CBE55C /* CheckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088AA2AE2AE1800CBE55C /* CheckListView.swift */; };
 		148088AD2AE2AE4900CBE55C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088AC2AE2AE4900CBE55C /* Task.swift */; };
-		148088AF2AE2AE7600CBE55C /* SingleMode_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088AE2AE2AE7600CBE55C /* SingleMode_1.swift */; };
 		148088B12AE2AEA000CBE55C /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088B02AE2AEA000CBE55C /* TaskViewModel.swift */; };
 		148088B32AE672BF00CBE55C /* TeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088B22AE672BF00CBE55C /* TeamMember.swift */; };
 		148088B52AE6746A00CBE55C /* TeamMemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088B42AE6746A00CBE55C /* TeamMemberViewModel.swift */; };
-		148088B72AE676AD00CBE55C /* TeamMode_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088B62AE676AD00CBE55C /* TeamMode_1.swift */; };
 		14B9ECF32AE11CD200D42922 /* CollAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9ECF22AE11CD200D42922 /* CollAppApp.swift */; };
 		14B9ECF52AE11CD200D42922 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9ECF42AE11CD200D42922 /* ContentView.swift */; };
 		14B9ECF72AE11CD300D42922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B9ECF62AE11CD300D42922 /* Assets.xcassets */; };
@@ -22,14 +25,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		066078072AE7E0D100C2B472 /* SingleMode_1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleMode_1.swift; sourceTree = "<group>"; };
+		066078082AE7E0D100C2B472 /* TeamMode_alt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamMode_alt.swift; path = "../../../../../../Desktop/copie backup/CollApp 24:10/CollApp/View/TeamMode_alt.swift"; sourceTree = "<group>"; };
+		066078092AE7E0D100C2B472 /* SheetAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SheetAvatar.swift; path = "../../../../../../Desktop/copie backup/CollApp 24:10/CollApp/View/SheetAvatar.swift"; sourceTree = "<group>"; };
+		0660780A2AE7E0D100C2B472 /* TeamMode_1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamMode_1.swift; sourceTree = "<group>"; };
+		0660780B2AE7E0D100C2B472 /* TeamMode_2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamMode_2.swift; path = "../../../../../../Desktop/copie backup/CollApp 24:10/CollApp/View/TeamMode_2.swift"; sourceTree = "<group>"; };
 		148088A82AE2ADF500CBE55C /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		148088AA2AE2AE1800CBE55C /* CheckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListView.swift; sourceTree = "<group>"; };
 		148088AC2AE2AE4900CBE55C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		148088AE2AE2AE7600CBE55C /* SingleMode_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMode_1.swift; sourceTree = "<group>"; };
 		148088B02AE2AEA000CBE55C /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		148088B22AE672BF00CBE55C /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
 		148088B42AE6746A00CBE55C /* TeamMemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberViewModel.swift; sourceTree = "<group>"; };
-		148088B62AE676AD00CBE55C /* TeamMode_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMode_1.swift; sourceTree = "<group>"; };
 		14B9ECEF2AE11CD200D42922 /* CollApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B9ECF22AE11CD200D42922 /* CollAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollAppApp.swift; sourceTree = "<group>"; };
 		14B9ECF42AE11CD200D42922 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,8 +58,11 @@
 			isa = PBXGroup;
 			children = (
 				14B9ECF42AE11CD200D42922 /* ContentView.swift */,
-				148088AE2AE2AE7600CBE55C /* SingleMode_1.swift */,
-				148088B62AE676AD00CBE55C /* TeamMode_1.swift */,
+				066078092AE7E0D100C2B472 /* SheetAvatar.swift */,
+				066078072AE7E0D100C2B472 /* SingleMode_1.swift */,
+				0660780A2AE7E0D100C2B472 /* TeamMode_1.swift */,
+				0660780B2AE7E0D100C2B472 /* TeamMode_2.swift */,
+				066078082AE7E0D100C2B472 /* TeamMode_alt.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,14 +203,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				14B9ECF52AE11CD200D42922 /* ContentView.swift in Sources */,
+				066078102AE7E0D100C2B472 /* TeamMode_2.swift in Sources */,
+				0660780D2AE7E0D100C2B472 /* TeamMode_alt.swift in Sources */,
 				148088B12AE2AEA000CBE55C /* TaskViewModel.swift in Sources */,
+				0660780F2AE7E0D100C2B472 /* TeamMode_1.swift in Sources */,
 				148088B32AE672BF00CBE55C /* TeamMember.swift in Sources */,
+				0660780E2AE7E0D100C2B472 /* SheetAvatar.swift in Sources */,
 				14B9ECF32AE11CD200D42922 /* CollAppApp.swift in Sources */,
+				0660780C2AE7E0D100C2B472 /* SingleMode_1.swift in Sources */,
 				148088AD2AE2AE4900CBE55C /* Task.swift in Sources */,
 				148088A92AE2ADF500CBE55C /* CheckBox.swift in Sources */,
 				148088B52AE6746A00CBE55C /* TeamMemberViewModel.swift in Sources */,
-				148088B72AE676AD00CBE55C /* TeamMode_1.swift in Sources */,
-				148088AF2AE2AE7600CBE55C /* SingleMode_1.swift in Sources */,
 				148088AB2AE2AE1800CBE55C /* CheckListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
