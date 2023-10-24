@@ -12,7 +12,7 @@ struct TeamMode_1: View {
     
     @StateObject var viewModel = TeamMemberViewModel()
     @State var memberName: String = ""
-    @State var image: String = "noimage_plus"
+    @State var image: String = "noimage_plus1"
     
     
     var body: some View {
@@ -29,29 +29,30 @@ struct TeamMode_1: View {
                                 Color.gray
                                 Image ("noimage")
                                     .resizable()
-                                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                    .aspectRatio(contentMode: .fill)
                                     .frame(width: 50.0, height: 50.0)
                                     .clipped()
-                            }.frame(width: 70.0, height: 70.0).clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/).padding(.leading, 0)
+                            }.frame(width: 70.0, height: 70.0).clipShape(Circle()).padding(.leading, 0)
                             Text(member.name)
                         }
                     }
                     HStack{
-                        Button (action: {
-                            /*Da settare qui il codice per il cambio immagine*/
-                        }, label: {
+                        
+                        
+                        NavigationLink(destination: SheetAvatar()) {
                             ZStack{
                                 
                                 Color.gray
                                 Image (image)
                                     .resizable()
-                                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                    .aspectRatio(contentMode: .fill)
                                     .frame(width: 50.0, height: 50.0)
                                     .clipped()
                                 
                                 
-                            }.frame(width: 70.0, height: 70.0).clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/).padding(.leading, 0)
-                        })
+                            }.frame(width: 70.0, height: 70.0).clipShape(Circle()).padding(.leading, 0)
+                        }
+                       
                         
                         
                         TextField("Team member name", text: $memberName)
@@ -74,10 +75,10 @@ struct TeamMode_1: View {
                         
                     })
                 }.padding(.leading, 30.0).frame(width: nil)
-
-
+                
+                
             }.frame(width: nil).navigationTitle("Team Members")
-
+            
         }.padding(.trailing, 50.0)
             .padding(.top, 100)
     }

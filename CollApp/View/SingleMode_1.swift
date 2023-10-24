@@ -11,6 +11,7 @@ import SwiftUI
 
 struct SingleMode_1: View {
     
+
     
     @StateObject var viewModel = TaskViewModel()
     
