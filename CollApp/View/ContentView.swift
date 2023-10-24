@@ -19,8 +19,8 @@ struct ContentView: View {
                
                 
                 .font(
-                    Font.custom("Times New Roman", size: 24)
-                        .weight(.black)
+                    Font.custom("Times New Roman", size: 28)
+                        .weight(.semibold)
                 )
             
                 .fontWeight(.semibold)
@@ -48,7 +48,7 @@ struct ContentView: View {
                         Image(systemName: "person.fill")
                     }
                     .font(
-                        Font.custom("SF Pro", size: 28)
+                        Font.custom("Times New Roman", size: 28)
                             .weight(.semibold)
                     )
                     .multilineTextAlignment(.center)
@@ -78,7 +78,7 @@ struct ContentView: View {
                         Image(systemName: "person.3.fill")
                     }
                     .font(
-                        Font.custom("SF Pro", size: 28)
+                        Font.custom("Times New Roman", size: 28)
                             .weight(.semibold)
                     )
                     .multilineTextAlignment(.center)

@@ -16,6 +16,7 @@
 		14B9ECF52AE11CD200D42922 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9ECF42AE11CD200D42922 /* ContentView.swift */; };
 		14B9ECF72AE11CD300D42922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B9ECF62AE11CD300D42922 /* Assets.xcassets */; };
 		14B9ECFA2AE11CD300D42922 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B9ECF92AE11CD300D42922 /* Preview Assets.xcassets */; };
+		EA80C6792AE6781200EC823A /* TeamMode_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA80C6782AE6781200EC823A /* TeamMode_2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		14B9ECF42AE11CD200D42922 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		14B9ECF62AE11CD300D42922 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14B9ECF92AE11CD300D42922 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA80C6782AE6781200EC823A /* TeamMode_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMode_2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			children = (
 				14B9ECF42AE11CD200D42922 /* ContentView.swift */,
 				148088AE2AE2AE7600CBE55C /* SingleMode_1.swift */,
+				EA80C6782AE6781200EC823A /* TeamMode_2.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA80C6792AE6781200EC823A /* TeamMode_2.swift in Sources */,
 				14B9ECF52AE11CD200D42922 /* ContentView.swift in Sources */,
 				148088B12AE2AEA000CBE55C /* TaskViewModel.swift in Sources */,
 				14B9ECF32AE11CD200D42922 /* CollAppApp.swift in Sources */,
