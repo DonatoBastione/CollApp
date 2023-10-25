@@ -75,3 +75,5 @@ struct TeamMode_alt: View {
 #Preview {
     TeamMode_alt()
 }
+
+//ciao
