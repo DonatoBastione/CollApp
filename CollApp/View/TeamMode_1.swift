@@ -39,7 +39,7 @@ struct TeamMode_1: View {
                     HStack{
                         
                         
-                        NavigationLink(destination: SingleMode_1()) {
+                        NavigationLink(destination: SheetAvatar()) {
                             ZStack{
                                 
                                 Color.gray
