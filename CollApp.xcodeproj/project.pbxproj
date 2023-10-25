@@ -10,6 +10,7 @@
 <<<<<<< HEAD
 		066FE8592AE7C3F4001DE6CF /* TeamMode_alt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066FE8582AE7C3F4001DE6CF /* TeamMode_alt.swift */; };
 <<<<<<< HEAD
+<<<<<<< HEAD
 		14038DFC2AE8F69100CE51E8 /* SingleMode_Alt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14038DFB2AE8F69100CE51E8 /* SingleMode_Alt.swift */; };
 =======
 		0660780C2AE7E0D100C2B472 /* SingleMode_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066078072AE7E0D100C2B472 /* SingleMode_1.swift */; };
@@ -18,6 +19,8 @@
 		0660780F2AE7E0D100C2B472 /* TeamMode_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0660780A2AE7E0D100C2B472 /* TeamMode_1.swift */; };
 		066078102AE7E0D100C2B472 /* TeamMode_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0660780B2AE7E0D100C2B472 /* TeamMode_2.swift */; };
 >>>>>>> parent of 1427716 (Test 2)
+=======
+>>>>>>> parent of 33252a7 (picchole modifiche)
 =======
 >>>>>>> parent of 33252a7 (picchole modifiche)
 		148088A92AE2ADF500CBE55C /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088A82AE2ADF500CBE55C /* CheckBox.swift */; };
@@ -36,6 +39,7 @@
 <<<<<<< HEAD
 		066FE8582AE7C3F4001DE6CF /* TeamMode_alt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMode_alt.swift; sourceTree = "<group>"; };
 <<<<<<< HEAD
+<<<<<<< HEAD
 		14038DFB2AE8F69100CE51E8 /* SingleMode_Alt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingleMode_Alt.swift; path = ../../../../../.Trash/CollApp/View/SingleMode_Alt.swift; sourceTree = "<group>"; };
 =======
 		066078072AE7E0D100C2B472 /* SingleMode_1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleMode_1.swift; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 		0660780A2AE7E0D100C2B472 /* TeamMode_1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamMode_1.swift; sourceTree = "<group>"; };
 		0660780B2AE7E0D100C2B472 /* TeamMode_2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamMode_2.swift; path = "../../../../../../Desktop/copie backup/CollApp 24:10/CollApp/View/TeamMode_2.swift"; sourceTree = "<group>"; };
 >>>>>>> parent of 1427716 (Test 2)
+=======
+>>>>>>> parent of 33252a7 (picchole modifiche)
 =======
 >>>>>>> parent of 33252a7 (picchole modifiche)
 		148088A82AE2ADF500CBE55C /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 				148088B62AE676AD00CBE55C /* TeamMode_1.swift */,
 				066FE8582AE7C3F4001DE6CF /* TeamMode_alt.swift */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				14038DFB2AE8F69100CE51E8 /* SingleMode_Alt.swift */,
 =======
 				066078092AE7E0D100C2B472 /* SheetAvatar.swift */,
@@ -87,6 +94,8 @@
 				0660780B2AE7E0D100C2B472 /* TeamMode_2.swift */,
 				066078082AE7E0D100C2B472 /* TeamMode_alt.swift */,
 >>>>>>> parent of 1427716 (Test 2)
+=======
+>>>>>>> parent of 33252a7 (picchole modifiche)
 =======
 >>>>>>> parent of 33252a7 (picchole modifiche)
 			);
