@@ -22,8 +22,11 @@ struct SModeAlt: View {
     var fotine = ImageClass()
 
     var body: some View {
-        
+       
         NavigationStack {
+            ZStack{
+                Image("BackGround")
+                    .ignoresSafeArea()
             
             ScrollView {
                 
@@ -39,7 +42,7 @@ struct SModeAlt: View {
                                             .dismiss ()
                                     }, label: {
                                         
-                                    
+                                        
                                         Image (systemName: "house")
                                             .foregroundColor (.blue)
                                         Text ("Close" )
@@ -50,7 +53,6 @@ struct SModeAlt: View {
                     })
                 
                 VStack {
-                    
                     ScrollView (.horizontal) {
                         LazyHStack{
                             ForEach(fotine.pupazzetti){pupazzetti in
@@ -64,6 +66,7 @@ struct SModeAlt: View {
                         .scrollTargetLayout()
                         
                     }
+                    .mask(Rectangle())
                     .scrollTargetBehavior(.viewAligned)
                     .safeAreaPadding(.horizontal, 115)
                     
@@ -129,7 +132,7 @@ struct SModeAlt: View {
                 
                 
                 
-                
+            }
             }
         }
         
