@@ -13,6 +13,8 @@
 		06A4CE292AE90201003BAB60 /* TeamModePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A4CE282AE90201003BAB60 /* TeamModePlayer.swift */; };
 		14038E002AE9062700CE51E8 /* Pawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14038DFF2AE9062700CE51E8 /* Pawn.swift */; };
 		14038E022AE9065600CE51E8 /* PawnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14038E012AE9065600CE51E8 /* PawnView.swift */; };
+		14038E062AEA6C8500CE51E8 /* ImageStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14038E052AEA6C8500CE51E8 /* ImageStruct.swift */; };
+		14038E082AEA6CAF00CE51E8 /* ImageClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14038E072AEA6CAF00CE51E8 /* ImageClass.swift */; };
 		148088A92AE2ADF500CBE55C /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088A82AE2ADF500CBE55C /* CheckBox.swift */; };
 		148088AB2AE2AE1800CBE55C /* CheckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088AA2AE2AE1800CBE55C /* CheckListView.swift */; };
 		148088AD2AE2AE4900CBE55C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088AC2AE2AE4900CBE55C /* Task.swift */; };
@@ -35,6 +37,8 @@
 		06A4CE282AE90201003BAB60 /* TeamModePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModePlayer.swift; sourceTree = "<group>"; };
 		14038DFF2AE9062700CE51E8 /* Pawn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pawn.swift; sourceTree = "<group>"; };
 		14038E012AE9065600CE51E8 /* PawnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawnView.swift; sourceTree = "<group>"; };
+		14038E052AEA6C8500CE51E8 /* ImageStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStruct.swift; sourceTree = "<group>"; };
+		14038E072AEA6CAF00CE51E8 /* ImageClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClass.swift; sourceTree = "<group>"; };
 		148088A82AE2ADF500CBE55C /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		148088AA2AE2AE1800CBE55C /* CheckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListView.swift; sourceTree = "<group>"; };
 		148088AC2AE2AE4900CBE55C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 				148088B02AE2AEA000CBE55C /* TaskViewModel.swift */,
 				148088B42AE6746A00CBE55C /* TeamMemberViewModel.swift */,
 				14038E012AE9065600CE51E8 /* PawnView.swift */,
+				14038E072AEA6CAF00CE51E8 /* ImageClass.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 				148088AC2AE2AE4900CBE55C /* Task.swift */,
 				148088B22AE672BF00CBE55C /* TeamMember.swift */,
 				14038DFF2AE9062700CE51E8 /* Pawn.swift */,
+				14038E052AEA6C8500CE51E8 /* ImageStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +224,8 @@
 				14B9ECF52AE11CD200D42922 /* ContentView.swift in Sources */,
 				6677D0122AE9022000D5757A /* Game View.swift in Sources */,
 				148088B12AE2AEA000CBE55C /* TaskViewModel.swift in Sources */,
+				14038E082AEA6CAF00CE51E8 /* ImageClass.swift in Sources */,
+				14038E062AEA6C8500CE51E8 /* ImageStruct.swift in Sources */,
 				148088B32AE672BF00CBE55C /* TeamMember.swift in Sources */,
 				14B9ECF32AE11CD200D42922 /* CollAppApp.swift in Sources */,
 				066FE8572AE7B732001DE6CF /* SheetAvatar.swift in Sources */,

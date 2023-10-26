@@ -19,7 +19,7 @@ struct SModeAlt: View {
     @State var nickname: String = ""
     @State var newTask: String = ""
     /*let images:[String] = ["noimage", "avatar1","avatar2","avatar3","avatar4","avatar5","avatar6","avatar7","avatar8","avatar9"]*/
-    var fotine = ImageClass ()
+    var fotine = ImageClass()
 
     var body: some View {
         
