@@ -152,6 +152,7 @@ struct Game_View: View {
             
             
         }.background(Image("iPhone 14 madre"))
+            .toolbar(.hidden)
        
             
        

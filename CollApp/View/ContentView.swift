@@ -8,19 +8,10 @@
 import SwiftUI
 
 
-
-
 struct ContentView: View {
     var body: some View {
         
-        
-        
-        
-        
-        
-            
-            
-            
+        NavigationStack{
             VStack {
                 Text("Choose the modality ")
                     .font(.title)
@@ -30,7 +21,7 @@ struct ContentView: View {
                 //Font.custom("SF Pro", size: 24, relativeTo: .title)
                 
                 
-                
+                    
                 
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
@@ -73,7 +64,7 @@ struct ContentView: View {
             }
             .padding()
             
-            
+                
             
             
             
@@ -108,12 +99,11 @@ struct ContentView: View {
                 }
             }
             
+            
+        }.toolbar(.hidden)
         
-            }
-       
-        }
-        
-    
+    }
+}
 
 
 
