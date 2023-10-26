@@ -7,8 +7,10 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     var body: some View {
+        
         NavigationStack{
             VStack {
                 Text("Choose the modality ")
@@ -59,7 +61,11 @@ struct ContentView: View {
                         
                     }
                 }
-            }.padding()
+            }
+            .padding()
+            
+                
+            
             
             
             
@@ -92,6 +98,7 @@ struct ContentView: View {
                     }
                 }
             }
+            
             
         }
         

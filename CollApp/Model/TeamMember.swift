@@ -13,5 +13,6 @@ struct TeamMember : Identifiable {
     var id: UUID = UUID()
     var name: String
     var image: String = "noimage"
+    var taskList = TaskViewModel()
 }
 
