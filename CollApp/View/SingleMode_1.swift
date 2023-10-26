@@ -13,6 +13,10 @@ struct SingleMode_1: View {
     
 
     
+    @Environment (\.presentationMode) private var
+    presentationMode: Binding<PresentationMode>
+    
+    
     @StateObject var viewModel = TaskViewModel()
     
     @State var nickname: String = ""
@@ -22,6 +26,28 @@ struct SingleMode_1: View {
         
         NavigationStack {
             
+            Spacer()
+                .navigationBarBackButtonHidden (true)
+                .toolbar(content: {
+                    ToolbarItem (placement:
+                            .navigationBarLeading) {
+                                
+                                Button(action: {
+                                    presentationMode.wrappedValue
+                                        .dismiss ()
+                                }, label: {
+                                    
+                                
+                                    Image (systemName: "house")
+                                        .foregroundColor (.blue)
+                                    Text ("Close" )
+                                        .foregroundColor(.blue)
+                                    
+                                })
+                            }
+                })
+                    
+                    
             ScrollView {
                 
                 
