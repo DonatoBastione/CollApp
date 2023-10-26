@@ -8,8 +8,5 @@
 import Foundation
 
 class TeamMemberViewModel: ObservableObject{
-    @Published var teamMember: [TeamMember] = [
-    
-            
-    ]
+    @Published var teamMember: [TeamMember] = []
 }

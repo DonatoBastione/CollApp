@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TeamMode_alt: View {
     @State var playerNumber: String = "2"
+    @State var pawntemp: String = ""
     
     var body: some View {
         Form{
@@ -63,8 +64,8 @@ struct TeamMode_alt: View {
                     }
                 
             }
-            Section(""){
-                Text("boh")
+            Section("Pawn"){
+                TextField("", text: $pawntemp)
             }
         }.scrollContentBackground(.hidden)
             .background(Image("BackGround"))

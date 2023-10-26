@@ -79,8 +79,10 @@ struct TeamMode_1: View {
                 
             }.frame(width: nil).navigationTitle("Team Members")
             
+            
         }.padding(.trailing, 50.0)
-            .padding(.top, 100)
+        .padding(.top, 100)
+        
     }
 }
 

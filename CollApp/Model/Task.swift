@@ -13,5 +13,6 @@ struct Task : Identifiable{
     var id: UUID = UUID()
     var text: String
     @State var done: Bool = false
+    var player: Int = 0
     
 }

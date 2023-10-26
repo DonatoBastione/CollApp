@@ -11,6 +11,8 @@
 		066FE8592AE7C3F4001DE6CF /* TeamMode_alt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066FE8582AE7C3F4001DE6CF /* TeamMode_alt.swift */; };
 		06A4CE272AE8FE85003BAB60 /* SModeAlt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A4CE262AE8FE85003BAB60 /* SModeAlt.swift */; };
 		06A4CE292AE90201003BAB60 /* TeamModePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A4CE282AE90201003BAB60 /* TeamModePlayer.swift */; };
+		14038E002AE9062700CE51E8 /* Pawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14038DFF2AE9062700CE51E8 /* Pawn.swift */; };
+		14038E022AE9065600CE51E8 /* PawnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14038E012AE9065600CE51E8 /* PawnView.swift */; };
 		148088A92AE2ADF500CBE55C /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088A82AE2ADF500CBE55C /* CheckBox.swift */; };
 		148088AB2AE2AE1800CBE55C /* CheckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088AA2AE2AE1800CBE55C /* CheckListView.swift */; };
 		148088AD2AE2AE4900CBE55C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148088AC2AE2AE4900CBE55C /* Task.swift */; };
@@ -30,6 +32,8 @@
 		066FE8582AE7C3F4001DE6CF /* TeamMode_alt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMode_alt.swift; sourceTree = "<group>"; };
 		06A4CE262AE8FE85003BAB60 /* SModeAlt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SModeAlt.swift; sourceTree = "<group>"; };
 		06A4CE282AE90201003BAB60 /* TeamModePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModePlayer.swift; sourceTree = "<group>"; };
+		14038DFF2AE9062700CE51E8 /* Pawn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pawn.swift; sourceTree = "<group>"; };
+		14038E012AE9065600CE51E8 /* PawnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawnView.swift; sourceTree = "<group>"; };
 		148088A82AE2ADF500CBE55C /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		148088AA2AE2AE1800CBE55C /* CheckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListView.swift; sourceTree = "<group>"; };
 		148088AC2AE2AE4900CBE55C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 			children = (
 				148088B02AE2AEA000CBE55C /* TaskViewModel.swift */,
 				148088B42AE6746A00CBE55C /* TeamMemberViewModel.swift */,
+				14038E012AE9065600CE51E8 /* PawnView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 			children = (
 				148088AC2AE2AE4900CBE55C /* Task.swift */,
 				148088B22AE672BF00CBE55C /* TeamMember.swift */,
+				14038DFF2AE9062700CE51E8 /* Pawn.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,9 +221,11 @@
 				066FE8592AE7C3F4001DE6CF /* TeamMode_alt.swift in Sources */,
 				148088AD2AE2AE4900CBE55C /* Task.swift in Sources */,
 				148088A92AE2ADF500CBE55C /* CheckBox.swift in Sources */,
+				14038E022AE9065600CE51E8 /* PawnView.swift in Sources */,
 				148088B52AE6746A00CBE55C /* TeamMemberViewModel.swift in Sources */,
 				148088B72AE676AD00CBE55C /* TeamMode_1.swift in Sources */,
 				148088AF2AE2AE7600CBE55C /* SingleMode_1.swift in Sources */,
+				14038E002AE9062700CE51E8 /* Pawn.swift in Sources */,
 				148088AB2AE2AE1800CBE55C /* CheckListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
