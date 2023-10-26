@@ -34,7 +34,7 @@ struct TeamModePlayer: View {
                                 
                                 HStack{
                                     NavigationLink(destination: ContentView()){
-                                        Text("     Home")
+                                        Text("  Home")
                                     }
                                     if(thisPlayer != totalPlayers){
                                         NavigationLink(destination:
@@ -42,13 +42,13 @@ struct TeamModePlayer: View {
                                             Text("Next")
                                             
                                         }
-                                        .padding(.leading, 220.0)
+                                        .padding(.leading, 250.0)
                                     }else{
                                         NavigationLink(destination: Game_View()) {
                                             Text("Next")
                                             
                                         }
-                                        .padding(.leading, 220.0)
+                                        .padding(.leading, 250.0)
                                     }
                                     
                                 }
