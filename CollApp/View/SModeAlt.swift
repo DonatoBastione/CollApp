@@ -11,7 +11,8 @@ import SwiftUI
 
 struct SModeAlt: View {
     
-
+    @Environment (\.presentationMode) private var
+    presentationMode: Binding<PresentationMode>
     
     @StateObject var viewModel = TaskViewModel()
     
@@ -26,6 +27,27 @@ struct SModeAlt: View {
             
             ScrollView {
                 
+                
+                Spacer()
+                    .navigationBarBackButtonHidden (true)
+                    .toolbar(content: {
+                        ToolbarItem (placement:
+                                .navigationBarLeading) {
+                                    
+                                    Button(action: {
+                                        presentationMode.wrappedValue
+                                            .dismiss ()
+                                    }, label: {
+                                        
+                                    
+                                        Image (systemName: "house")
+                                            .foregroundColor (.blue)
+                                        Text ("Close" )
+                                            .foregroundColor(.blue)
+                                        
+                                    })
+                                }
+                    })
                 
                 VStack {
                     
