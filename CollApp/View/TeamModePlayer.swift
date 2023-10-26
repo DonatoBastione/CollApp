@@ -11,7 +11,7 @@ struct TeamModePlayer: View {
     
     
     @Environment (\.presentationMode) private var
-    presentationMode: Binding<PresentationMode>
+presentationMode: Binding<PresentationMode>
     
     @StateObject var viewModel = TaskViewModel()
     
@@ -20,10 +20,12 @@ struct TeamModePlayer: View {
     
     var totalPlayers: Int
     var thisPlayer: Int
+    var fotine = ImageClass()
+    
     
     var body: some View {
         
-            
+        
         NavigationStack {
             
             Spacer()
@@ -34,7 +36,7 @@ struct TeamModePlayer: View {
                                 
                                 HStack{
                                     NavigationLink(destination: ContentView()){
-                                        Text("  Home")
+                                        Text("  Close")
                                     }
                                     if(thisPlayer != totalPlayers){
                                         NavigationLink(destination:
@@ -42,7 +44,7 @@ struct TeamModePlayer: View {
                                             Text("Next")
                                             
                                         }
-                                        .padding(.leading, 250.0)
+                                                        .padding(.leading, 250.0)
                                     }else{
                                         NavigationLink(destination: Game_View()) {
                                             Text("Next")
@@ -67,105 +69,95 @@ struct TeamModePlayer: View {
                     VStack {
                         
                         
-                        ZStack{
-                            Color.gray //quando si implementa l'immagine questo è da eliminare, ora serve per capire le dimensioni
-                            Image ("noimage")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 150.0, height: 150.0)
-                                .clipped()
+                        
+                        VStack {
+                            ScrollView (.horizontal) {
+                                LazyHStack{
+                                    ForEach(fotine.pupazzetti){pupazzetti in
+                                        Image (pupazzetti.imageAvatar)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 170.0, height: 150.0)
+                                            .clipped()
+                                    }
+                                }
+                                .scrollTargetLayout()
+                                
+                            }.frame(width: 170.0, height: 170.0).clipShape(Circle())
+                            
+                            TextField("\("Player ")\(thisPlayer) ", text: $nickname)
+                                .padding([.leading,], 120.0)
+                                .padding(.top,10)
+                                .bold()
+                                .font(.largeTitle)
+                        
                             
                             
+                        } .padding(.top, 50.0)
+                        
+                        
+                        
+                        VStack(alignment: .leading, content: {
                             
+                            Text("Tasks:")
+                                .bold()
+                                .font(.title)
+                                .padding(.bottom)
                             
-                            
-                        }.frame(width: 170.0, height: 170.0).clipShape(Circle())
-                        
-                        TextField("\("Member ")\(thisPlayer) ", text: $nickname)
-                            .padding([.leading,], 120.0)
-                            .padding(.top,10)
-                            .bold()
-                            .font(.largeTitle)
-                        
-                        
-                        
-                        Button(action: {},
-                               label: {
-                            Image (systemName: "plus")
-                                .resizable()
-                                .frame (width: 40, height: 40)
-                                .padding(.top, -130.0)
-                                .padding(.leading, 95)
-                                .foregroundStyle (Color.yellow)
-                            
-                            
-                            
-                        })
-                        
-                        
-                        
-                        
-                    } .padding(.top, 50.0)
-                    
-                    
-                    
-                    VStack(alignment: .leading, content: {
-                        
-                        Text("Tasks:")
-                            .bold()
-                            .font(.title)
-                        Text(" ")
-                        
-                        ForEach(viewModel.tasks) {tasks in
-                            if(tasks.player == thisPlayer){
-                                HStack{
-                                    Text(tasks.text)
+                            ForEach(viewModel.tasks) {tasks in
+                                if(tasks.player == thisPlayer){
+                                    HStack{
+                                        CheckListView(checked: tasks.done)
+                                        Text(tasks.text)
+                                    }
                                 }
                             }
-                        }
-                        
-                        
-                    })
-                    .padding(.leading, -150.0)
-                    
-                    VStack(alignment: .leading, content: {
-                        TextField("New Task:", text: $newTask)
-                        
-                        Button(action: {
-                            if(newTask != ""){
-                                viewModel.tasks.append(Task(text: newTask, player: thisPlayer))
-                                newTask = ""
-                            }
-                        }, label: {
-                            HStack{
-                                Image (systemName: "plus")
-                                    .resizable()
-                                    .frame (width: 20, height: 20)
-                                    .foregroundStyle (Color.yellow)
-                                Text ("Add")
-                            }
                             
                             
                         })
+                        .padding(.leading, -150.0)
                         
-                    }).padding(.leading, 45.0)
-                    
-                    
-                    
-                    
-                    
-                    
+                        VStack(alignment: .leading, content: {
+                            TextField("New Task:", text: $newTask)
+                            
+                            Button(action: {
+                                if(newTask != ""){
+                                    viewModel.tasks.append(Task(text: newTask, player: thisPlayer))
+                                    newTask = ""
+                                }
+                            }, label: {
+                                HStack{
+                                    Image (systemName: "plus")
+                                        .resizable()
+                                        .frame (width: 20, height: 20)
+                                    
+                                    Text ("Add")
+                                }
+                                
+                                
+                            })
+                            
+                        }).padding(.leading, 45.0)
+                        
+                        
+                        
+                        
+                        
+                        
+                    }
                 }
+                
             }
+            
             
         }
         
-
+        
     }
     
-
-}
-
+   
+    }
 #Preview {
     TeamModePlayer(totalPlayers: 3, thisPlayer: 1)
 }
+

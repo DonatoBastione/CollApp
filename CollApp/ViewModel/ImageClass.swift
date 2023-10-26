@@ -16,8 +16,6 @@ class ImageClass{
         ImageStruct(imageAvatar: "avatar4"),
         ImageStruct(imageAvatar: "avatar5"),
         ImageStruct(imageAvatar: "avatar6"),
-        ImageStruct(imageAvatar: "avatar7"),
-        ImageStruct(imageAvatar: "avatar8"),
-        ImageStruct(imageAvatar: "avatar9")
+        ImageStruct(imageAvatar: "avatar7")
     ]
 }

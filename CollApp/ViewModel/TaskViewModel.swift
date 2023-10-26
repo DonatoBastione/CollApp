@@ -12,8 +12,8 @@ class TaskViewModel: ObservableObject {
     
     @Published var tasks: [Task] = [
     
-        Task(text: "Mangiare"),
-        Task(text: "Dormire")
+        Task(text: "Write bibliography"),
+        Task(text: "Finish chapter 1")
     
     ]
     

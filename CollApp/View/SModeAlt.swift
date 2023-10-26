@@ -43,10 +43,10 @@ struct SModeAlt: View {
                                     }, label: {
                                         
                                         
-                                        Image (systemName: "house")
-                                            .foregroundColor (.blue)
-                                        Text ("Close" )
-                                            .foregroundColor(.blue)
+                
+                                           
+                                        Text ("  Close" )
+                                            
                                         
                                     })
                                 }
@@ -58,7 +58,7 @@ struct SModeAlt: View {
                             ForEach(fotine.pupazzetti){pupazzetti in
                                 Image (pupazzetti.imageAvatar)
                                     .resizable()
-                                    .aspectRatio(contentMode: .fill)
+                                    .aspectRatio(contentMode: .fit)
                                     .frame(width: 170.0, height: 150.0)
                                     .clipped()
                             }
@@ -92,7 +92,7 @@ struct SModeAlt: View {
                     Text("Tasks:")
                         .bold()
                         .font(.title)
-                    Text(" ")
+                        .padding(.top)
                     
                     ForEach(viewModel.tasks) {tasks in
                         
@@ -119,7 +119,6 @@ struct SModeAlt: View {
                             Image (systemName: "plus")
                                 .resizable()
                                 .frame (width: 20, height: 20)
-                                .foregroundStyle (Color.yellow)
                             Text ("Add")
                         }
                         

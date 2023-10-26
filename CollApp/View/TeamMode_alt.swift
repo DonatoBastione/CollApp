@@ -86,6 +86,7 @@ struct TeamMode_alt: View {
                         }
                     Section("Pawn"){
                         TextField("", text: $pawntemp)
+                         
                     }
                 }.scrollContentBackground(.hidden)
                     .background(Image("BackGround"))
@@ -102,10 +103,8 @@ struct TeamMode_alt: View {
                                         }, label: {
                                             
                                             
-                                            Image (systemName: "house")
-                                                .foregroundColor (.blue)
-                                            Text ("Close" )
-                                                .foregroundColor(.blue)
+                                            Text ("  Close" )
+                                               
                                             
                                         }
                                         )
