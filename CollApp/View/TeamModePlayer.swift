@@ -32,24 +32,34 @@ struct TeamModePlayer: View {
                     ToolbarItem (placement:
                             .navigationBarLeading) {
                                 
-                                Button(action: {
-                                    presentationMode.wrappedValue
-                                        .dismiss ()
-                                }, label: {
+                                HStack{
+                                    NavigationLink(destination: ContentView()){
+                                        Text("     Home")
+                                    }
+                                    if(thisPlayer != totalPlayers){
+                                        NavigationLink(destination:
+                                                        TeamModePlayer(totalPlayers: totalPlayers, thisPlayer: thisPlayer+1)) {
+                                            Text("Next")
+                                            
+                                        }
+                                        .padding(.leading, 220.0)
+                                    }else{
+                                        NavigationLink(destination: Game_View()) {
+                                            Text("Next")
+                                            
+                                        }
+                                        .padding(.leading, 220.0)
+                                    }
                                     
-                                
-                                    Image (systemName: "house")
-                                        .foregroundColor (.blue)
-                                    Text ("Close" )
-                                        .foregroundColor(.blue)
-                                    
-                                })
+                                }
                             }
                 })
             
             ZStack{
                 Image("BackGround")
                     .ignoresSafeArea()
+                
+                
                 
                 ScrollView {
                     
@@ -71,7 +81,7 @@ struct TeamModePlayer: View {
                             
                         }.frame(width: 170.0, height: 170.0).clipShape(Circle())
                         
-                        TextField("NickName", text: $nickname)
+                        TextField("\("Member ")\(thisPlayer) ", text: $nickname)
                             .padding([.leading,], 120.0)
                             .padding(.top,10)
                             .bold()
@@ -107,9 +117,10 @@ struct TeamModePlayer: View {
                         Text(" ")
                         
                         ForEach(viewModel.tasks) {tasks in
-                            
-                            HStack{
-                                Text(tasks.text)
+                            if(tasks.player == thisPlayer){
+                                HStack{
+                                    Text(tasks.text)
+                                }
                             }
                         }
                         
@@ -122,7 +133,7 @@ struct TeamModePlayer: View {
                         
                         Button(action: {
                             if(newTask != ""){
-                                viewModel.tasks.append(Task(text: newTask))
+                                viewModel.tasks.append(Task(text: newTask, player: thisPlayer))
                                 newTask = ""
                             }
                         }, label: {
