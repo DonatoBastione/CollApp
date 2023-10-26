@@ -18,6 +18,9 @@ struct TeamModePlayer: View {
     @State var nickname: String = ""
     @State var newTask: String = ""
     
+    var totalPlayers: Int
+    var thisPlayer: Int
+    
     var body: some View {
         
             
@@ -153,5 +156,5 @@ struct TeamModePlayer: View {
 }
 
 #Preview {
-    TeamModePlayer()
+    TeamModePlayer(totalPlayers: 3, thisPlayer: 1)
 }
