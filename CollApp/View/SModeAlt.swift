@@ -18,8 +18,9 @@ struct SModeAlt: View {
     
     @State var nickname: String = ""
     @State var newTask: String = ""
-    let images:[String] = ["noimage", "avatar1","avatar2","avatar3","avatar4","avatar5","avatar6","avatar7","avatar8","avatar9"]
-    
+    /*let images:[String] = ["noimage", "avatar1","avatar2","avatar3","avatar4","avatar5","avatar6","avatar7","avatar8","avatar9"]*/
+    var fotine = ImageClass ()
+
     var body: some View {
         
         NavigationStack {
@@ -51,17 +52,20 @@ struct SModeAlt: View {
                 VStack {
                     
                     ScrollView (.horizontal) {
-                        HStack{
-                            ForEach(images.indices){image in
-                                Image (images[image])
+                        LazyHStack{
+                            ForEach(fotine.pupazzetti){pupazzetti in
+                                Image (pupazzetti.imageAvatar)
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
-                                    .frame(width: 150.0, height: 150.0)
+                                    .frame(width: 170.0, height: 150.0)
                                     .clipped()
                             }
                         }
+                        .scrollTargetLayout()
                         
                     }
+                    .scrollTargetBehavior(.viewAligned)
+                    .safeAreaPadding(.horizontal, 115)
                     
                     TextField("NickName", text: $nickname)
                         .padding([.leading,], 120.0)
@@ -71,18 +75,7 @@ struct SModeAlt: View {
                     
                     
                     
-                    Button(action: {},
-                           label: {
-                        Image (systemName: "plus")
-                            .resizable()
-                            .frame (width: 40, height: 40)
-                            .padding(.top, -130.0)
-                            .padding(.leading, 95)
-                            .foregroundStyle (Color.yellow)
-                        
-                        
-                        
-                    })
+                    
                     
                     
                     
