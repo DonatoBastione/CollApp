@@ -11,6 +11,7 @@
 		066FE8592AE7C3F4001DE6CF /* TeamMode_alt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066FE8582AE7C3F4001DE6CF /* TeamMode_alt.swift */; };
 		06A4CE272AE8FE85003BAB60 /* SModeAlt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A4CE262AE8FE85003BAB60 /* SModeAlt.swift */; };
 		06A4CE292AE90201003BAB60 /* TeamModePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A4CE282AE90201003BAB60 /* TeamModePlayer.swift */; };
+		06F10DA72AEB98C20033F480 /* GameView_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F10DA62AEB98C20033F480 /* GameView_2.swift */; };
 		14038E002AE9062700CE51E8 /* Pawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14038DFF2AE9062700CE51E8 /* Pawn.swift */; };
 		14038E022AE9065600CE51E8 /* PawnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14038E012AE9065600CE51E8 /* PawnView.swift */; };
 		14038E062AEA6C8500CE51E8 /* ImageStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14038E052AEA6C8500CE51E8 /* ImageStruct.swift */; };
@@ -35,6 +36,7 @@
 		066FE8582AE7C3F4001DE6CF /* TeamMode_alt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMode_alt.swift; sourceTree = "<group>"; };
 		06A4CE262AE8FE85003BAB60 /* SModeAlt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SModeAlt.swift; sourceTree = "<group>"; };
 		06A4CE282AE90201003BAB60 /* TeamModePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModePlayer.swift; sourceTree = "<group>"; };
+		06F10DA62AEB98C20033F480 /* GameView_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView_2.swift; sourceTree = "<group>"; };
 		14038DFF2AE9062700CE51E8 /* Pawn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pawn.swift; sourceTree = "<group>"; };
 		14038E012AE9065600CE51E8 /* PawnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawnView.swift; sourceTree = "<group>"; };
 		14038E052AEA6C8500CE51E8 /* ImageStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStruct.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				066FE8582AE7C3F4001DE6CF /* TeamMode_alt.swift */,
 				06A4CE262AE8FE85003BAB60 /* SModeAlt.swift */,
 				06A4CE282AE90201003BAB60 /* TeamModePlayer.swift */,
+				06F10DA62AEB98C20033F480 /* GameView_2.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				148088B52AE6746A00CBE55C /* TeamMemberViewModel.swift in Sources */,
 				148088B72AE676AD00CBE55C /* TeamMode_1.swift in Sources */,
 				148088AF2AE2AE7600CBE55C /* SingleMode_1.swift in Sources */,
+				06F10DA72AEB98C20033F480 /* GameView_2.swift in Sources */,
 				14038E002AE9062700CE51E8 /* Pawn.swift in Sources */,
 				148088AB2AE2AE1800CBE55C /* CheckListView.swift in Sources */,
 			);
