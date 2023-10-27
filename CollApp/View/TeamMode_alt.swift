@@ -13,6 +13,8 @@ struct TeamMode_alt: View {
     @Environment (\.presentationMode) private var
     presentationMode: Binding<PresentationMode>
     
+    @StateObject var taskViewModel = TaskViewModel()
+    @StateObject var teamViewModel = TeamMemberViewModel()
     
     @State var playerNumber: Int = 2
     @State var pawntemp: String = ""
@@ -25,7 +27,7 @@ struct TeamMode_alt: View {
             
             ZStack{
                 
-                NavigationLink(destination: TeamModePlayer(totalPlayers: playerNumber, thisPlayer: 1)) {
+                NavigationLink(destination: TeamModePlayer(taskViewModel: taskViewModel, teamViewModel: teamViewModel, totalPlayers: playerNumber, thisPlayer: 1)) {
                     Text("Next")
                     
                 }
@@ -77,8 +79,6 @@ struct TeamMode_alt: View {
                                     Text("3").tag(3)
                                     Text("4").tag(4)
                                     
-                                    
-                                    
                                 }.pickerStyle(.inline)
                                 
                             }
@@ -108,7 +108,7 @@ struct TeamMode_alt: View {
                                             
                                         }
                                         )
-                                        NavigationLink(destination: TeamModePlayer(totalPlayers: playerNumber, thisPlayer: 1)) {
+                                        NavigationLink(destination: TeamModePlayer(taskViewModel: taskViewModel, teamViewModel: teamViewModel, totalPlayers: playerNumber, thisPlayer: 1)) {
                                             Text("Next")
                                             
                                         }

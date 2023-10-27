@@ -13,13 +13,13 @@ struct TeamModePlayer: View {
     @Environment (\.presentationMode) private var
 presentationMode: Binding<PresentationMode>
     
-    @StateObject var viewModel = TaskViewModel()
+    @StateObject var taskViewModel: TaskViewModel
+    @StateObject var teamViewModel: TeamMemberViewModel
+    var totalPlayers: Int
+    var thisPlayer: Int
     
     @State var nickname: String = ""
     @State var newTask: String = ""
-    
-    var totalPlayers: Int
-    var thisPlayer: Int
     var fotine = ImageClass()
     
     
@@ -38,13 +38,14 @@ presentationMode: Binding<PresentationMode>
                                     NavigationLink(destination: ContentView()){
                                         Text("  Close")
                                     }
+                                    ZStack{
                                     if(thisPlayer != totalPlayers){
-                                        NavigationLink(destination:
-                                                        TeamModePlayer(totalPlayers: totalPlayers, thisPlayer: thisPlayer+1)) {
+                                        NavigationLink(destination: TeamModePlayer(taskViewModel: taskViewModel, teamViewModel: teamViewModel, totalPlayers: totalPlayers, thisPlayer: thisPlayer+1)
+                                                        ) {
                                             Text("Next")
                                             
                                         }
-                                                        .padding(.leading, 250.0)
+                                        .padding(.leading, 250.0)
                                     }else{
                                         if(totalPlayers == 4){
                                             NavigationLink(destination: Game_View()) {
@@ -65,6 +66,7 @@ presentationMode: Binding<PresentationMode>
                                             }
                                             .padding(.leading, 250.0)
                                         }
+                                    }
                                     }
                                     
                                 }
@@ -118,7 +120,7 @@ presentationMode: Binding<PresentationMode>
                                 .font(.title)
                                 .padding(.bottom)
                             
-                            ForEach(viewModel.tasks) {tasks in
+                            ForEach(taskViewModel.tasks) {tasks in
                                 if(tasks.player == thisPlayer){
                                     HStack{
                                         Image(systemName: "circle.fill")
@@ -140,7 +142,7 @@ presentationMode: Binding<PresentationMode>
                             TextField("New Task:", text: $newTask)
                                 .onSubmit {
                                     if(newTask != ""){
-                                        viewModel.tasks.append(Task(text: newTask, player: thisPlayer))
+                                        taskViewModel.tasks.append(Task(text: newTask, player: thisPlayer))
                                         newTask = ""
                                     }
                                 }
@@ -168,6 +170,7 @@ presentationMode: Binding<PresentationMode>
    
     }
 #Preview {
-    TeamModePlayer(totalPlayers: 3, thisPlayer: 1)
+    TeamModePlayer(taskViewModel: TaskViewModel()
+, teamViewModel: TeamMemberViewModel(), totalPlayers: 3, thisPlayer: 1)
 }
 
