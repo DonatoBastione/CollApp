@@ -13,7 +13,8 @@ struct TeamModePlayer: View {
     @Environment (\.presentationMode) private var
 presentationMode: Binding<PresentationMode>
     
-    @StateObject var viewModel = TaskViewModel()
+    @StateObject var taskViewModel: TaskViewModel
+    @StateObject var teamViewModel: TeamMemberViewModel
     
     @State var nickname: String = ""
     @State var newTask: String = ""
@@ -39,8 +40,8 @@ presentationMode: Binding<PresentationMode>
                                         Text("  Close")
                                     }
                                     if(thisPlayer != totalPlayers){
-                                        NavigationLink(destination:
-                                                        TeamModePlayer(totalPlayers: totalPlayers, thisPlayer: thisPlayer+1)) {
+                                        NavigationLink(destination: TeamModePlayer(taskViewModel: taskViewModel, teamViewModel: teamViewModel, totalPlayers: totalPlayers, thisPlayer: thisPlayer+1)
+                                                        ) {
                                             Text("Next")
                                             
                                         }
@@ -118,7 +119,7 @@ presentationMode: Binding<PresentationMode>
                                 .font(.title)
                                 .padding(.bottom)
                             
-                            ForEach(viewModel.tasks) {tasks in
+                            ForEach(taskViewModel.tasks) {tasks in
                                 if(tasks.player == thisPlayer){
                                     HStack{
                                         Image(systemName: "circle.fill")
@@ -140,7 +141,7 @@ presentationMode: Binding<PresentationMode>
                             TextField("New Task:", text: $newTask)
                                 .onSubmit {
                                     if(newTask != ""){
-                                        viewModel.tasks.append(Task(text: newTask, player: thisPlayer))
+                                        taskViewModel.tasks.append(Task(text: newTask, player: thisPlayer))
                                         newTask = ""
                                     }
                                 }
@@ -168,6 +169,7 @@ presentationMode: Binding<PresentationMode>
    
     }
 #Preview {
-    TeamModePlayer(totalPlayers: 3, thisPlayer: 1)
+    TeamModePlayer(taskViewModel: TaskViewModel()
+, teamViewModel: TeamMemberViewModel(), totalPlayers: 3, thisPlayer: 1)
 }
 
