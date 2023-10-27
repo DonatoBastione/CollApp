@@ -1,5 +1,5 @@
 //
-//  GameView_2.swift
+//  GameView_3.swift
 //  CollApp
 //
 //  Created by Giuseppe Olivari on 27/10/23.
@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct GameView_2: View {
+struct GameView_3: View {
     var body: some View {
+        
         ZStack{
             ZStack{
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
@@ -58,8 +59,8 @@ struct GameView_2: View {
                             
                     }
                     }.frame(width:UIScreen.main.bounds.width/2.2,height: UIScreen.main.bounds.height/4)
-                        .position(x:UIScreen.main.bounds.width/2,y:UIScreen.main.bounds.height/5)
-                        
+                        .position(x:UIScreen.main.bounds.width/4,y:UIScreen.main.bounds.height/5)
+              
                         
                     
                     
@@ -67,7 +68,6 @@ struct GameView_2: View {
                         Image("avatar5")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            
                             
                         Text ("Player3")
                         ZStack{
@@ -92,9 +92,34 @@ struct GameView_2: View {
                         }
                     
                     }.frame(width:UIScreen.main.bounds.width/2.2,height: UIScreen.main.bounds.height/4)
-                    .position(x:UIScreen.main.bounds.width/2,y:UIScreen.main.bounds.height/4.5)}
-                
-                       
+                    .position(x:UIScreen.main.bounds.width/2,y:UIScreen.main.bounds.height/4)}
+                       VStack {
+                           VStack{
+                               Image("avatar4")
+                                   .resizable()
+                                   .aspectRatio(contentMode: .fit)
+                               
+                               Text ("Player2")
+                               ZStack{
+                                   Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                                       ZStack{
+                                           Image("Ellipse 24")
+                                               .resizable()
+                                               .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                               .padding(.top,20)
+                                               .padding(.bottom,-10)
+                                           Text("Task:\nDefine the essential question")
+                                               .foregroundColor(.black)
+                                               .padding(.top)
+                                       }
+                                   })
+                                   
+                           }
+                           }.frame(width:UIScreen.main.bounds.width/2.2,height: UIScreen.main.bounds.height/4)
+                               .position(x:UIScreen.main.bounds.width/4,y:UIScreen.main.bounds.height/5);
+                           
+                     
+                }
                 
                 
             
@@ -103,7 +128,7 @@ struct GameView_2: View {
            
             
             
-        }.background(Image("GameView2"))
+        }.background(Image("GameView3"))
             .toolbar(.hidden)
        
             
@@ -112,5 +137,5 @@ struct GameView_2: View {
 }
 
 #Preview {
-    GameView_2()
+    GameView_3()
 }
