@@ -10,6 +10,12 @@ import SwiftUI
 struct Game_View: View {
     var body: some View {
         ZStack{
+            Image("BackGround")
+                .resizable()
+                .ignoresSafeArea()
+                .opacity(0.5)
+                .scaledToFill()
+            
             ZStack{
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                     Image ("Ellipse 4")
