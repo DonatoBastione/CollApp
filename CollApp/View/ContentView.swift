@@ -37,7 +37,7 @@ struct ContentView: View {
                 
                 VStack{
                 
-                NavigationLink(destination: SingleMode_1()) {
+                NavigationLink(destination: SModeAlt()) {
                     
                     ZStack{
                         Rectangle()
