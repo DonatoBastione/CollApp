@@ -107,7 +107,12 @@ presentationMode: Binding<PresentationMode>
                             ForEach(viewModel.tasks) {tasks in
                                 if(tasks.player == thisPlayer){
                                     HStack{
-                                        CheckListView(checked: tasks.done)
+                                        Image(systemName: "circle.fill")
+                                            .resizable()
+                                            .frame(width: 24, height: 24)
+                                            .foregroundColor(.accentColor)
+                                        
+                                        Text("")
                                         Text(tasks.text)
                                     }
                                 }
@@ -119,23 +124,14 @@ presentationMode: Binding<PresentationMode>
                         
                         VStack(alignment: .leading, content: {
                             TextField("New Task:", text: $newTask)
+                                .onSubmit {
+                                    if(newTask != ""){
+                                        viewModel.tasks.append(Task(text: newTask, player: thisPlayer))
+                                        newTask = ""
+                                    }
+                                }
                             
-                            Button(action: {
-                                if(newTask != ""){
-                                    viewModel.tasks.append(Task(text: newTask, player: thisPlayer))
-                                    newTask = ""
-                                }
-                            }, label: {
-                                HStack{
-                                    Image (systemName: "plus")
-                                        .resizable()
-                                        .frame (width: 20, height: 20)
-                                    
-                                    Text ("Add")
-                                }
-                                
-                                
-                            })
+                            
                             
                         }).padding(.leading, 45.0)
                         
