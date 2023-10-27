@@ -18,7 +18,7 @@ struct ContentView: View {
                     .ignoresSafeArea()
                 
                 VStack {
-                    Text("Choose the modality ")
+                    Text("CHOOSE MODE")
                         .font(.title)
                     //.font(
                     //.system(size: 24, weight: .semibold, design: .default)

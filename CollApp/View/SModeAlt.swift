@@ -106,29 +106,31 @@ struct SModeAlt: View {
                     }
                     
                     
+                    
                 })
                 .padding(.leading, -150.0)
                 
                 VStack(alignment: .leading, content: {
-                    TextField("New Task:", text: $newTask)
-                    
-                    Button(action: {
-                        if(newTask != ""){
-                            viewModel.tasks.append(Task(text: newTask))
-                            newTask = ""
-                        }
-                    }, label: {
-                        HStack{
-                            Image (systemName: "plus")
-                                .resizable()
-                                .frame (width: 20, height: 20)
-                            Text ("Add")
-                        }
+                    HStack{
                         
+                        Image(systemName: "circle.fill")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                            .foregroundColor(.accentColor)
                         
-                    })
-                    
-                }).padding(.leading, 45.0)
+                        Text("")
+                        
+                        TextField("New Task:", text: $newTask)
+                            .onSubmit {
+                                if(newTask != ""){
+                                    viewModel.tasks.append(Task(text: newTask))
+                                    newTask = ""
+                                }
+                            }
+                            
+                    }
+                                        
+                }).padding(.leading, 33.0)
                 
                 
                 
