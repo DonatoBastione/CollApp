@@ -13,25 +13,27 @@ struct GameView_3: View {
         ZStack{
             ZStack{
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Image ("Ellipse 4")
-                        .resizable()
-                        .frame(width: 110, height: 110)
+                    NavigationLink(destination: FinalView()) {
+                        Image ("Ellipse 4")
+                            .resizable()
+                            .frame(width: 110, height: 110)
+                            .padding(.top,UIScreen.main.bounds.height/60)
+                            .padding(.bottom,UIScreen.main.bounds.width/60)
+                            .padding(.leading,UIScreen.main.bounds.width/60)
+                            .padding(.trailing,UIScreen.main.bounds.width/60)
+                        
+                    }
+                })
+                NavigationLink(destination: FinalView()) {
+                    Text("Stop")
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(.white)
                         .padding(.top,UIScreen.main.bounds.height/60)
                         .padding(.bottom,UIScreen.main.bounds.width/60)
                         .padding(.leading,UIScreen.main.bounds.width/60)
-                        .padding(.trailing,UIScreen.main.bounds.width/60)
-                    
-                    
-                })
-                Text("Stop")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.white)
-                    .padding(.top,UIScreen.main.bounds.height/60)
-                    .padding(.bottom,UIScreen.main.bounds.width/60)
-                    .padding(.leading,UIScreen.main.bounds.width/60)
                     .padding(.trailing,UIScreen.main.bounds.width/60)            }
-    
+            }
             
             
                    HStack{
