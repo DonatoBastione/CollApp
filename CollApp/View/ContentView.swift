@@ -110,7 +110,9 @@ struct ContentView: View {
             }
             
         }
+        .toolbar(.hidden)
     }
+    
     
 }
 
