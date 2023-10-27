@@ -15,12 +15,11 @@ presentationMode: Binding<PresentationMode>
     
     @StateObject var taskViewModel: TaskViewModel
     @StateObject var teamViewModel: TeamMemberViewModel
+    var totalPlayers: Int
+    var thisPlayer: Int
     
     @State var nickname: String = ""
     @State var newTask: String = ""
-    
-    var totalPlayers: Int
-    var thisPlayer: Int
     var fotine = ImageClass()
     
     
@@ -39,13 +38,14 @@ presentationMode: Binding<PresentationMode>
                                     NavigationLink(destination: ContentView()){
                                         Text("  Close")
                                     }
+                                    ZStack{
                                     if(thisPlayer != totalPlayers){
                                         NavigationLink(destination: TeamModePlayer(taskViewModel: taskViewModel, teamViewModel: teamViewModel, totalPlayers: totalPlayers, thisPlayer: thisPlayer+1)
                                                         ) {
                                             Text("Next")
                                             
                                         }
-                                                        .padding(.leading, 250.0)
+                                        .padding(.leading, 250.0)
                                     }else{
                                         if(totalPlayers == 4){
                                             NavigationLink(destination: Game_View()) {
@@ -66,6 +66,7 @@ presentationMode: Binding<PresentationMode>
                                             }
                                             .padding(.leading, 250.0)
                                         }
+                                    }
                                     }
                                     
                                 }

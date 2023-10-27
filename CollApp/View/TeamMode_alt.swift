@@ -79,8 +79,6 @@ struct TeamMode_alt: View {
                                     Text("3").tag(3)
                                     Text("4").tag(4)
                                     
-                                    
-                                    
                                 }.pickerStyle(.inline)
                                 
                             }
