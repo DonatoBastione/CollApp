@@ -28,8 +28,13 @@ struct SModeAlt: View {
        
         NavigationStack {
             ZStack{
+                //Image("BackGround")
+                    //.ignoresSafeArea()
                 Image("BackGround")
+                    .resizable()
                     .ignoresSafeArea()
+                    .scaledToFill()
+                    
             
             ScrollView {
                 
