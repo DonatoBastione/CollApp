@@ -46,11 +46,25 @@ presentationMode: Binding<PresentationMode>
                                         }
                                                         .padding(.leading, 250.0)
                                     }else{
-                                        NavigationLink(destination: Game_View()) {
-                                            Text("Next")
-                                            
+                                        if(totalPlayers == 4){
+                                            NavigationLink(destination: Game_View()) {
+                                                Text("Next")
+                                                
+                                            }
+                                            .padding(.leading, 250.0)
+                                        }else if(totalPlayers == 3){
+                                            NavigationLink(destination: GameView_3()) {
+                                                Text("Next")
+                                                
+                                            }
+                                            .padding(.leading, 250.0)
+                                        }else{
+                                            NavigationLink(destination: GameView_2()) {
+                                                Text("Next")
+                                                
+                                            }
+                                            .padding(.leading, 250.0)
                                         }
-                                        .padding(.leading, 250.0)
                                     }
                                     
                                 }
