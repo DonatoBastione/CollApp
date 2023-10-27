@@ -44,26 +44,37 @@ presentationMode: Binding<PresentationMode>
                                                         ) {
                                             Text("Next")
                                             
-                                        }
+                                        }.simultaneousGesture(TapGesture().onEnded{
+                                            teamViewModel.teamMember.append(TeamMember(name: nickname))
+                                        })
                                         .padding(.leading, 250.0)
                                     }else{
                                         if(totalPlayers == 4){
                                             NavigationLink(destination: Game_View()) {
                                                 Text("Next")
                                                 
-                                            }
+                                            }.simultaneousGesture(TapGesture().onEnded{
+                                                teamViewModel.teamMember.append(TeamMember(name: nickname))
+                                            })
+
                                             .padding(.leading, 250.0)
                                         }else if(totalPlayers == 3){
                                             NavigationLink(destination: GameView_3()) {
                                                 Text("Next")
                                                 
-                                            }
+                                            }.simultaneousGesture(TapGesture().onEnded{
+                                                teamViewModel.teamMember.append(TeamMember(name: nickname))
+                                            })
+
                                             .padding(.leading, 250.0)
                                         }else{
                                             NavigationLink(destination: GameView_2()) {
                                                 Text("Next")
                                                 
-                                            }
+                                            }.simultaneousGesture(TapGesture().onEnded{
+                                                teamViewModel.teamMember.append(TeamMember(name: nickname))
+                                            })
+
                                             .padding(.leading, 250.0)
                                         }
                                     }
