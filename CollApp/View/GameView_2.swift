@@ -11,6 +11,13 @@ struct GameView_2: View {
     var body: some View {
         NavigationStack {
             ZStack{
+                
+                Image("BackGround")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .opacity(0.5)
+                    .scaledToFill()
+                
                 ZStack{
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                         
@@ -118,3 +125,4 @@ struct GameView_2: View {
 #Preview {
     GameView_2()
 }
+
