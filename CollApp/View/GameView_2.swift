@@ -33,7 +33,7 @@ struct GameView_2: View {
     
             
             
-                   HStack{
+                   
     
                 VStack {
                     VStack{
@@ -98,7 +98,7 @@ struct GameView_2: View {
                 
                 
             
-            }
+            
             
            
             
