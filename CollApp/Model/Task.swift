@@ -14,5 +14,6 @@ struct Task : Identifiable{
     var text: String
     @State var done: Bool = false
     var player: Int = 0
+    var done2: Bool = false
     
 }

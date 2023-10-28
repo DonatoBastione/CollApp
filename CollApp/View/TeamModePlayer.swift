@@ -68,7 +68,7 @@ presentationMode: Binding<PresentationMode>
 
                                             .padding(.leading, 250.0)
                                         }else{
-                                            NavigationLink(destination: GameView_2()) {
+                                            NavigationLink(destination: GameView_2(taskViewModel: taskViewModel, teamViewModel: teamViewModel)) {
                                                 Text("Next")
                                                 
                                             }.simultaneousGesture(TapGesture().onEnded{

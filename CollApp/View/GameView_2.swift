@@ -8,6 +8,19 @@
 import SwiftUI
 
 struct GameView_2: View {
+    
+    
+        
+    
+    
+    @StateObject var taskViewModel: TaskViewModel
+    @StateObject var teamViewModel: TeamMemberViewModel
+    @State var taskPlayer1 = "Tap to start!"
+    @State var taskPlayer2 = "Tap to start!"
+    @State var indexP1: Int = 0
+    @State var indexP2: Int = 1
+    
+
     var body: some View {
         NavigationStack {
             ZStack{
@@ -52,16 +65,20 @@ struct GameView_2: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                         
-                        Text ("Player1")
+                        Text (teamViewModel.teamMember[0].name)
                         ZStack{
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                            Button(action: {
+                                
+                                indexP1 = FindNextTaskP1(number: 1, index: indexP1)
+                                
+                            }, label: {
                                 ZStack{
                                     Image("Ellipse 23")
                                         .resizable()
                                         .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                                         .padding(.top,20)
                                         .padding(.bottom,-10)
-                                    Text("Task:\nDefine the big ideal")
+                                    Text(taskPlayer1)
                                         .foregroundColor(.black)
                                         .padding(.top)
                                 }
@@ -80,18 +97,22 @@ struct GameView_2: View {
                             .aspectRatio(contentMode: .fit)
                         
                         
-                        Text ("Player3")
+                        Text (teamViewModel.teamMember[1].name)
                         ZStack{
                             
                             ZStack{
-                                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                                Button(action: {
+                                    
+                                    indexP2 = FindNextTaskP2(number: 2, index: indexP2)
+                                    
+                                }, label: {
                                     ZStack{
                                         Image("Ellipse 25")
                                             .resizable()
                                             .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                                             .padding(.top,20)
                                             .padding(.bottom,-10)
-                                        Text("Task:\nDefine the big ideal")
+                                        Text(taskPlayer2)
                                             .foregroundColor(.black)
                                             .padding(.top)
                                     }
@@ -120,9 +141,39 @@ struct GameView_2: View {
             
         }
     }
+    func FindNextTaskP1 (number: Int, index: Int) -> Int {
+        if (index >= taskViewModel.tasks.count){
+            taskPlayer1 = "Fine!"
+        }else if (taskViewModel.tasks[index].player == number && taskViewModel.tasks[index].done2 == false){
+            taskPlayer1 = taskViewModel.tasks[index].text
+            taskViewModel.tasks[index].done2 = true
+            return index+1
+        }else{
+            return FindNextTaskP1(number: number, index: index+1)
+        }
+        return 0
+        
+        
+    }
+    func FindNextTaskP2 (number: Int, index: Int) -> Int {
+        if (index >= taskViewModel.tasks.count){
+            taskPlayer2 = "Fine!"
+        }else if (taskViewModel.tasks[index].player == number && taskViewModel.tasks[index].done2 == false){
+            taskPlayer2 = taskViewModel.tasks[index].text
+            taskViewModel.tasks[index].done2 = true
+            return index+1
+        }else{
+            return FindNextTaskP2(number: number, index: index+1)
+        }
+        return 0
+        
+        
+    }
 }
 
+
+
 #Preview {
-    GameView_2()
+    GameView_2(taskViewModel: TaskViewModel(), teamViewModel: TeamMemberViewModel())
 }
 

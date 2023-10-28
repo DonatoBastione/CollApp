@@ -92,7 +92,7 @@ struct FinalView: View {
                 }
             }
             
-        }
+        }.toolbar(.hidden)
     }
 }
 
