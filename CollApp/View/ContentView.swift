@@ -21,6 +21,7 @@ struct ContentView: View {
                 VStack {
                     Text("CHOOSE MODE")
                         .font(.title)
+                        .italic()
                     //.font(
                     //.system(size: 24, weight: .semibold, design: .default)
                     
@@ -54,6 +55,8 @@ struct ContentView: View {
                         VStack{
                             HStack{
                                 Text("Single")
+                                  
+                                    
                                 Image(systemName: "person.fill")
                             }
                             .font(
@@ -91,6 +94,7 @@ struct ContentView: View {
                         VStack{
                             HStack{
                                 Text("Team")
+                                   
                                 Image(systemName: "person.3.fill")
                             }
                             .font(

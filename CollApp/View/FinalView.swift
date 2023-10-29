@@ -11,18 +11,13 @@ struct FinalView: View {
     var body: some View {
         
             NavigationStack {
+                
                 ZStack{
                     
                     Image("BackGround")
                         .resizable()
                         .ignoresSafeArea()
                         .scaledToFill()
-                NavigationLink(destination: ContentView()) {
-                    Text("Done")
-                        .padding(.leading,280)
-                        .padding(.bottom,700)
-                  
-                }
                 
                 VStack{
                     //Image(systemName: "fireworks")
@@ -31,6 +26,7 @@ struct FinalView: View {
                         .padding(.bottom,50)
                         .bold()
                         .font(.title)
+                        .italic()
                     ZStack{
                         Image(systemName: "fireworks")
                             .resizable()
@@ -39,6 +35,7 @@ struct FinalView: View {
                             .frame(width: 70)
                             .padding(.trailing,200)
                             .padding(.bottom,330)
+                            .foregroundColor(.accentColor)
                         
                         
                         Image(systemName: "fireworks")
@@ -47,6 +44,7 @@ struct FinalView: View {
                             .frame(width: 70)
                             .padding(.bottom,450)
                             .padding(.trailing,130)
+                            .foregroundColor(.accentColor)
                         
                         
                         Image(systemName: "fireworks")
@@ -55,12 +53,21 @@ struct FinalView: View {
                             .frame(width: 70)
                             .padding(.bottom,450)
                             .padding(.trailing,280)
+                            .foregroundColor(.accentColor)
                         
                         
                         
-                        Text("Bartolomeo\nYou didn’t completed the task\nDrive your friends to go shopping")
+                            Text("Bartolomeo")
+                            .padding(.bottom,190)
+                     
+                        Text("\nYou didn’t complete the task\nDrive your friends to go shopping")
+                            .font(.subheadline)
                             .frame(width: 250, height: 150)
-                            .border(Color.accentColor)
+                      
+                            .overlay(
+                                      RoundedRectangle(cornerRadius: 20)
+                                          .stroke(Color.accentColor, lineWidth: 3)
+                                  )
                         
                         
                         
@@ -72,6 +79,7 @@ struct FinalView: View {
                             .frame(width: 70)
                             .padding(.leading,200)
                             .padding(.top,280)
+                            .foregroundColor(.accentColor)
                         
                         
                         Image(systemName: "fireworks")
@@ -80,6 +88,7 @@ struct FinalView: View {
                             .frame(width: 70)
                             .padding(.leading,250)
                             .padding(.top,140)
+                            .foregroundColor(.accentColor)
                         
                         Image(systemName: "fireworks")
                             .resizable()
@@ -87,12 +96,21 @@ struct FinalView: View {
                             .frame(width: 70)
                             .padding(.top,140)
                             .padding(.leading,120)
+                            .foregroundColor(.accentColor)
                         
                     }
                 }
-            }
+                }.toolbar {
+                   
+                    NavigationLink(destination: ContentView()) {
+                        Text("Done")
+                           
+                        
+                    }
+                }
             
-        }.toolbar(.hidden)
+            
+        }.navigationBarBackButtonHidden()
     }
 }
 

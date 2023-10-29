@@ -12,7 +12,7 @@ import SwiftUI
 struct SModeAlt: View {
     
     @Environment (\.presentationMode) private var
-    presentationMode: Binding<PresentationMode>
+presentationMode: Binding<PresentationMode>
     
     @StateObject var viewModel = TaskViewModel()
     
@@ -25,123 +25,123 @@ struct SModeAlt: View {
     
     
     var body: some View {
-       
+        
         NavigationStack {
             ZStack{
                 //Image("BackGround")
-                    //.ignoresSafeArea()
+                //.ignoresSafeArea()
                 Image("BackGround")
                     .resizable()
                     .ignoresSafeArea()
                     .scaledToFill()
+                
+                
+                ScrollView {
                     
-            
-            ScrollView {
-                
-                
-                Spacer()
-                    .navigationBarBackButtonHidden (true)
-                    .toolbar(content: {
-                        ToolbarItem (placement:
-                                .navigationBarLeading) {
-                                    
-                                    Button(action: {
-                                        presentationMode.wrappedValue
-                                            .dismiss ()
-                                    }, label: {
+                    
+                    Spacer()
+                        .navigationBarBackButtonHidden (true)
+                        .toolbar(content: {
+                            ToolbarItem (placement:
+                                    .navigationBarLeading) {
                                         
-                                        
-                
-                                           
-                                        Text ("  Close" )
+                                        Button(action: {
+                                            presentationMode.wrappedValue
+                                                .dismiss ()
+                                        }, label: {
                                             
-                                        
-                                    })
-                                }
-                    })
-                
-                VStack {
-                    ScrollView (.horizontal) {
-                        LazyHStack{
-                            ForEach(fotine.pupazzetti){pupazzetti in
-                                Image (pupazzetti.imageAvatar)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 170.0, height: 150.0)
-                                    .clipped()
-                            }
-                        }
-                        .scrollTargetLayout()
-                        
-                    }
-                    .mask(Rectangle())
-                    .scrollTargetBehavior(.viewAligned)
-                    .safeAreaPadding(.horizontal, 115)
+                                            
+                                            
+                                            
+                                            Text ("  Close" )
+                                            
+                                            
+                                        })
+                                    }
+                        })
                     
-                    TextField("NickName", text: $nickname)
-                        .padding([.leading,], 120.0)
-                        .padding(.top,10)
-                        .bold()
-                        .font(.largeTitle)
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                } .padding(.top, 50.0)
-                
-                
-                
-                VStack(alignment: .leading, content: {
-                    
-                    Text("Tasks:")
-                        .bold()
-                        .font(.title)
-                        .padding(.top)
-                    
-                    ForEach(viewModel.tasks) {tasks in
-                        
-                        HStack{
-                            CheckListView(checked: tasks.done)
-                            Text(tasks.text)
-                        }
-                    }
-                    
-                    
-                    
-                })
-                .padding(.leading, -150.0)
-                
-                VStack(alignment: .leading, content: {
-                    HStack{
-                        
-                        Image(systemName: "circle.fill")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                            .foregroundColor(.accentColor)
-                        
-                        Text("")
-                        
-                        TextField("New Task:", text: $newTask)
-                            .onSubmit {
-                                if(newTask != ""){
-                                    viewModel.tasks.append(Task(text: newTask))
-                                    newTask = ""
+                    VStack {
+                        ScrollView (.horizontal) {
+                            LazyHStack{
+                                ForEach(fotine.pupazzetti){pupazzetti in
+                                    Image (pupazzetti.imageAvatar)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 170.0, height: 150.0)
+                                        .clipped()
                                 }
                             }
+                            .scrollTargetLayout()
                             
-                    }
-                                        
-                }).padding(.leading, 33.0)
-                
-                
-                
-                
-                
-            }
+                        }
+                        .mask(Rectangle())
+                        .scrollTargetBehavior(.viewAligned)
+                        .safeAreaPadding(.horizontal, 115)
+                        
+                        TextField("NickName", text: $nickname)
+                            .padding([.leading,], 120.0)
+                            .padding(.top,10)
+                            .bold()
+                            .font(.largeTitle)
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    } .padding(.top, 50.0)
+                    
+                    
+                    
+                    VStack(alignment: .leading, content: {
+                        
+                        Text("Tasks:")
+                            .font(.title)
+                          
+                            .padding(.top)
+                        
+                        ForEach(viewModel.tasks) {tasks in
+                            
+                            HStack{
+                                CheckListView(checked: tasks.done)
+                                Text(tasks.text)
+                            }
+                        }
+                        
+                        
+                        
+                    })
+                    .padding(.leading, -150)
+                    
+                    VStack(alignment: .leading, content: {
+                        HStack{
+                            
+                            Image(systemName: "circle.fill")
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                                .foregroundColor(.accentColor)
+                            
+                        
+                            
+                            TextField("New Task:", text: $newTask)
+                                .onSubmit {
+                                    if(newTask != ""){
+                                        viewModel.tasks.append(Task(text: newTask))
+                                        newTask = ""
+                                    }
+                                }
+                            
+                        }
+                        
+                    }).padding(.leading, 45.0)
+                    
+                    
+                    
+                    
+                    
+                }
             }
         }
         

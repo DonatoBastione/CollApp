@@ -33,34 +33,9 @@ struct TeamMode_alt: View {
                 }
                 Form{
                     
-                    
-                    
-                    Section(header: Text("")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.black)
-                        .multilineTextAlignment(.leading)){
-                            
-                            
-                        }
-                    Section(header: Text("")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.black)
-                        .multilineTextAlignment(.leading)){
-                            
-                            
-                        }
-                    Section(header: Text("")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.black)
-                        .multilineTextAlignment(.leading)){
-                            
-                            
-                        }
                     Section(header: Text("Select Your Player")
                         .font(.title)
+                        .italic()
                         .fontWeight(.bold)
                         .foregroundColor(Color.black)
                         .multilineTextAlignment(.leading)){
@@ -68,11 +43,7 @@ struct TeamMode_alt: View {
                             
                         }
                     
-                    Section(header: Text("")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.black)
-                        .multilineTextAlignment(.leading)){
+                    Section{
                             List{
                                 Picker("Number of players:", selection: $playerNumber ) {
                                     Text("2").tag(2)
@@ -80,15 +51,20 @@ struct TeamMode_alt: View {
                                     Text("4").tag(4)
                                     
                                 }.pickerStyle(.inline)
+                                    .font(.title3)
+                                    
                                 
                             }
                             
                         }
-                    Section("Pawn"){
+                    Section{
+                        Text("Pawn")
+                            .font(.title3)
                         TextField("", text: $pawntemp)
                          
                     }
-                }.scrollContentBackground(.hidden)
+                }.padding(.top,200)
+                .scrollContentBackground(.hidden)
                     .background(Image("BackGround"))
                     .ignoresSafeArea()
                 

@@ -127,7 +127,7 @@ presentationMode: Binding<PresentationMode>
                         VStack(alignment: .leading, content: {
                             
                             Text("Tasks:")
-                                .bold()
+                               
                                 .font(.title)
                                 .padding(.bottom)
                             
