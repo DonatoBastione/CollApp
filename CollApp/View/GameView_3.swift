@@ -16,9 +16,14 @@ Image("BackGround")
                 .ignoresSafeArea()
                 .opacity(0.5)
                 .scaledToFill()
-                ZStack{
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        NavigationLink(destination: FinalView()) {
+            
+                    
+                            
+                            
+                     
+                    NavigationLink(destination: FinalView()) {
+                        
+                        ZStack{
                             Image ("Ellipse 4")
                                 .resizable()
                                 .frame(width: 110, height: 110)
@@ -26,21 +31,19 @@ Image("BackGround")
                                 .padding(.bottom,UIScreen.main.bounds.width/60)
                                 .padding(.leading,UIScreen.main.bounds.width/60)
                                 .padding(.trailing,UIScreen.main.bounds.width/60)
-                            
+                            Text("STOP")
+                                .font(.title)
+                                .bold()
+                                .italic()
+                                .foregroundColor(.white)
+                                .padding(.top,UIScreen.main.bounds.height/60)
+                                .padding(.bottom,UIScreen.main.bounds.width/60)
+                                .padding(.leading,UIScreen.main.bounds.width/60)
+                                .padding(.trailing,UIScreen.main.bounds.width/60)
                         }
-                    })
-                    NavigationLink(destination: FinalView()) {
-                        Text("STOP")
-                            .font(.title)
-                            .bold()
-                            .italic()
-                            .foregroundColor(.white)
-                            .padding(.top,UIScreen.main.bounds.height/60)
-                            .padding(.bottom,UIScreen.main.bounds.width/60)
-                            .padding(.leading,UIScreen.main.bounds.width/60)
-                        .padding(.trailing,UIScreen.main.bounds.width/60) 
-                        }
-                }
+                    }
+                    
+                
                 
                 
                 HStack{

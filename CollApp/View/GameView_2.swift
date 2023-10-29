@@ -31,21 +31,16 @@ struct GameView_2: View {
                     .opacity(0.5)
                     .scaledToFill()
                 
-                ZStack{
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        
-                        NavigationLink(destination: FinalView()) {
-                            Image ("Ellipse 4")
-                                .resizable()
-                                .frame(width: 110, height: 110)
-                                .padding(.top,UIScreen.main.bounds.height/60)
-                                .padding(.bottom,UIScreen.main.bounds.width/60)
-                                .padding(.leading,UIScreen.main.bounds.width/60)
-                                .padding(.trailing,UIScreen.main.bounds.width/60)
-                            
-                        }
-                    })
-                    NavigationLink(destination: FinalView()){
+                NavigationLink(destination: FinalView()) {
+                    
+                    ZStack{
+                        Image ("Ellipse 4")
+                            .resizable()
+                            .frame(width: 110, height: 110)
+                            .padding(.top,UIScreen.main.bounds.height/60)
+                            .padding(.bottom,UIScreen.main.bounds.width/60)
+                            .padding(.leading,UIScreen.main.bounds.width/60)
+                            .padding(.trailing,UIScreen.main.bounds.width/60)
                         Text("STOP")
                             .font(.title)
                             .bold()
@@ -54,9 +49,10 @@ struct GameView_2: View {
                             .padding(.top,UIScreen.main.bounds.height/60)
                             .padding(.bottom,UIScreen.main.bounds.width/60)
                             .padding(.leading,UIScreen.main.bounds.width/60)
-                        .padding(.trailing,UIScreen.main.bounds.width/60)            }
+                            .padding(.trailing,UIScreen.main.bounds.width/60)
+                    }
                 }
-                
+
                 
                 
                 
