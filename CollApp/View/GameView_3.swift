@@ -67,7 +67,7 @@ Image("BackGround")
                             }
                         }.frame(width:UIScreen.main.bounds.width/2.2,height: UIScreen.main.bounds.height/4)
                             .position(x:UIScreen.main.bounds.width/4,y:UIScreen.main.bounds.height/5)
-                        
+                            .padding(.top,40)
                         
                         
                         
@@ -100,6 +100,7 @@ Image("BackGround")
                             
                         }.frame(width:UIScreen.main.bounds.width/2.2,height: UIScreen.main.bounds.height/4)
                         .position(x:UIScreen.main.bounds.width/2,y:UIScreen.main.bounds.height/4)}
+                    
                     VStack {
                         VStack{
                             Image("avatar4")
@@ -124,9 +125,11 @@ Image("BackGround")
                             }
                         }.frame(width:UIScreen.main.bounds.width/2.2,height: UIScreen.main.bounds.height/4)
                             .position(x:UIScreen.main.bounds.width/4,y:UIScreen.main.bounds.height/5);
+                            
+                           
                         
                         
-                    }
+                    }      .padding(.top,40)
                     
                     
                     

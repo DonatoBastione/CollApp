@@ -31,8 +31,9 @@ Image("BackGround")
                             }
                         })
                         
-                        Text("Stop")
+                        Text("STOP")
                             .font(.title)
+                            .italic()
                             .bold()
                             .foregroundColor(.white)
                             .padding(.top,UIScreen.main.bounds.height/60)
@@ -51,6 +52,7 @@ Image("BackGround")
                                 .aspectRatio(contentMode: .fit)
                             
                             Text ("Player1")
+                                .font(.title3)
                             ZStack{
                                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                                     ZStack{
@@ -60,6 +62,7 @@ Image("BackGround")
                                             .padding(.top,20)
                                             .padding(.bottom,-10)
                                         Text("Task:\nDefine the big ideal")
+                                            .font(.subheadline)
                                             .foregroundColor(.black)
                                             .padding(.top)
                                     }
@@ -78,6 +81,7 @@ Image("BackGround")
                                 .aspectRatio(contentMode: .fit)
                             
                             Text ("Player3")
+                                .font(.title3)
                             ZStack{
                                 
                                 ZStack{
@@ -89,6 +93,7 @@ Image("BackGround")
                                                 .padding(.top,20)
                                                 .padding(.bottom,-10)
                                             Text("Task:\nDefine the big ideal")
+                                                .font(.subheadline)
                                                 .foregroundColor(.black)
                                                 .padding(.top)
                                         }
@@ -108,6 +113,7 @@ Image("BackGround")
                                 .aspectRatio(contentMode: .fit)
                             
                             Text ("Player2")
+                                .font(.title3)
                             ZStack{
                                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                                     ZStack{
@@ -117,6 +123,7 @@ Image("BackGround")
                                             .padding(.top,20)
                                             .padding(.bottom,-10)
                                         Text("Task:\nDefine the essential question")
+                                            .font(.subheadline)
                                             .foregroundColor(.black)
                                             .padding(.top)
                                     }
@@ -133,6 +140,7 @@ Image("BackGround")
                                 .padding(.top,20)
                                 .padding(.bottom,-10)
                             Text ("Player4")
+                                .font(.title3)
                             
                             ZStack{
                                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
@@ -143,6 +151,7 @@ Image("BackGround")
                                             .padding(.top,20)
                                             .padding(.bottom,-10)
                                         Text("Task:\nDefine Challange statement")
+                                            .font(.subheadline)
                                             .foregroundColor(.black)
                                             .padding(.top)
                                     }

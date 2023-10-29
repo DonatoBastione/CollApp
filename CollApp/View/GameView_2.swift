@@ -10,7 +10,7 @@ import SwiftUI
 struct GameView_2: View {
     
     
-        
+    
     
     
     @StateObject var taskViewModel: TaskViewModel
@@ -20,7 +20,7 @@ struct GameView_2: View {
     @State var indexP1: Int = 0
     @State var indexP2: Int = 1
     
-
+    
     var body: some View {
         NavigationStack {
             ZStack{
@@ -125,6 +125,7 @@ struct GameView_2: View {
                         
                     }.frame(width:UIScreen.main.bounds.width/2.2,height: UIScreen.main.bounds.height/4)
                     .position(x:UIScreen.main.bounds.width/2,y:UIScreen.main.bounds.height/4.5)}
+                .padding(.top,35)
                 
                 
                 
