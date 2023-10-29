@@ -46,9 +46,10 @@ struct GameView_2: View {
                         }
                     })
                     NavigationLink(destination: FinalView()){
-                        Text("Stop")
+                        Text("STOP")
                             .font(.title)
                             .bold()
+                            .italic()
                             .foregroundColor(.white)
                             .padding(.top,UIScreen.main.bounds.height/60)
                             .padding(.bottom,UIScreen.main.bounds.width/60)

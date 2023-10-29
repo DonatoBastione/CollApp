@@ -30,14 +30,16 @@ Image("BackGround")
                         }
                     })
                     NavigationLink(destination: FinalView()) {
-                        Text("Stop")
+                        Text("STOP")
                             .font(.title)
                             .bold()
+                            .italic()
                             .foregroundColor(.white)
                             .padding(.top,UIScreen.main.bounds.height/60)
                             .padding(.bottom,UIScreen.main.bounds.width/60)
                             .padding(.leading,UIScreen.main.bounds.width/60)
-                        .padding(.trailing,UIScreen.main.bounds.width/60)            }
+                        .padding(.trailing,UIScreen.main.bounds.width/60) 
+                        }
                 }
                 
                 
