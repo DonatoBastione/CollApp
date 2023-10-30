@@ -134,7 +134,7 @@ struct GameView_2: View {
                 
                 VStack {
                     VStack{
-                        Image("avatar1")
+                        Image(teamViewModel.teamMember[0].image)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                         
@@ -165,7 +165,7 @@ struct GameView_2: View {
                     
                     
                     VStack{
-                        Image("avatar5")
+                        Image(teamViewModel.teamMember[1].image)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                         

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct TeamModePlayer: View {
     
     
@@ -23,7 +24,7 @@ presentationMode: Binding<PresentationMode>
     @State var newTask: String = ""
     var fotine = ImageClass()
     @State var isActive = false
-    
+    @State var selfoto: String = "noimage"
     
     var body: some View {
         
@@ -47,7 +48,7 @@ presentationMode: Binding<PresentationMode>
                                             Text("Next")
                                             
                                         }.simultaneousGesture(TapGesture().onEnded{
-                                            teamViewModel.teamMember.append(TeamMember(name: nickname))
+                                            teamViewModel.teamMember.append(TeamMember(name: nickname,image: selfoto))
                                         })
                                         .padding(.leading, 250.0)
                                     }else{
@@ -56,7 +57,7 @@ presentationMode: Binding<PresentationMode>
                                                 Text("Next")
                                                 
                                             }.simultaneousGesture(TapGesture().onEnded{
-                                                teamViewModel.teamMember.append(TeamMember(name: nickname))
+                                                teamViewModel.teamMember.append(TeamMember(name: nickname,image: selfoto))
                                             })
 
                                             .padding(.leading, 250.0)
@@ -65,7 +66,7 @@ presentationMode: Binding<PresentationMode>
                                                 Text("Next")
                                                 
                                             }.simultaneousGesture(TapGesture().onEnded{
-                                                teamViewModel.teamMember.append(TeamMember(name: nickname))
+                                                teamViewModel.teamMember.append(TeamMember(name: nickname,image: selfoto))
                                             })
 
                                             .padding(.leading, 250.0)
@@ -74,7 +75,7 @@ presentationMode: Binding<PresentationMode>
                                                 Text("Next")
                                                 
                                             }.simultaneousGesture(TapGesture().onEnded{
-                                                teamViewModel.teamMember.append(TeamMember(name: nickname))
+                                                teamViewModel.teamMember.append(TeamMember(name: nickname,image: selfoto))
                                             })
 
                                             .padding(.leading, 250.0)
@@ -100,19 +101,18 @@ presentationMode: Binding<PresentationMode>
                         
                         
                         VStack {
-                            ScrollView (.horizontal) {
-                                LazyHStack{
-                                    ForEach(fotine.pupazzetti){pupazzetti in
-                                        Image (pupazzetti.imageAvatar)
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 170.0, height: 150.0)
-                                            .clipped()
-                                    }
+                            TabView(selection: $selfoto){
+                                ForEach(fotine.pupazzetti){pupazzetti in
+                                    Image (pupazzetti.imageAvatar)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 170.0, height: 150.0)
+                                        .clipped()
+                                        .tag(pupazzetti.imageAvatar)
                                 }
-                                .scrollTargetLayout()
-                                
-                            }.frame(width: 170.0, height: 170.0).clipShape(Circle())
+                            }
+                            .frame(height: 130)
+                            .tabViewStyle(PageTabViewStyle())
                             
                             TextField("\("Player ")\(thisPlayer) ", text: $nickname)
                                 .padding([.leading,], 120.0)

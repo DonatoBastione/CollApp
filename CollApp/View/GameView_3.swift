@@ -227,7 +227,7 @@ Image("BackGround")
                     
                     VStack {
                         VStack{
-                            Image("avatar1")
+                            Image(teamViewModel.teamMember[0].image)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                             
@@ -256,7 +256,7 @@ Image("BackGround")
                         
                         
                         VStack{
-                            Image("avatar5")
+                            Image(teamViewModel.teamMember[1].image)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                             
@@ -289,7 +289,7 @@ Image("BackGround")
                     
                     VStack {
                         VStack{
-                            Image("avatar4")
+                            Image(teamViewModel.teamMember[2].image)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                             
