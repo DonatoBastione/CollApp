@@ -70,11 +70,12 @@ presentationMode: Binding<PresentationMode>
                                         .frame(width: 170.0, height: 150.0)
                                         .clipped()
                                         .tag(pupazzetti.imageAvatar)
-                                        .padding(.bottom,2)
+                                        .padding(.bottom,50)
                                 }
                             }
-                            .frame(height: 130)
+                            .frame(height: 180)
                             .tabViewStyle(PageTabViewStyle())
+                        
                             /*.mask(Rectangle())
                             .scrollTargetBehavior(.viewAligned)
                             .safeAreaPadding(.horizontal, 115)*/
