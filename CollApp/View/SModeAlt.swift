@@ -22,11 +22,14 @@ presentationMode: Binding<PresentationMode>
     @State var selfoto: String = ""
     
     
+    
     /*let images:[String] = ["noimage", "avatar1","avatar2","avatar3","avatar4","avatar5","avatar6","avatar7","avatar8","avatar9"]*/
     var fotine = ImageClass()
     
     
     var body: some View {
+        
+        var i: Int = 0
         
         NavigationStack {
             ZStack{
@@ -113,7 +116,12 @@ presentationMode: Binding<PresentationMode>
                                 CheckListView(checked: tasks.done)
                                 Text(tasks.text)
                                 
-                                Button(action: {}, label: {
+                                Button(action: {
+                                    while viewModel.tasks[i].text != tasks.text {
+                                        i = i+1
+                                    }
+                                    viewModel.tasks.remove(at: i)
+                                }, label: {
                                     Image(systemName: "trash")
                                 })
                             }

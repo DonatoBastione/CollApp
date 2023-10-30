@@ -28,9 +28,10 @@ struct TeamMode_alt: View {
             ZStack{
                 
                 NavigationLink(destination: TeamModePlayer(taskViewModel: taskViewModel, teamViewModel: teamViewModel, totalPlayers: playerNumber, thisPlayer: 1, pawn: pawntemp)) {
-                    Text("Next")
+                    Text("Next").padding()
                     
                 }
+                
                 Form{
                     
                     Section(header: Text("Select Your Player")
@@ -88,7 +89,7 @@ struct TeamMode_alt: View {
                                             Text("Next")
                                             
                                         }
-                                        .padding(.leading, 220.0)
+                                        .padding(.leading, 250.0)
                                         
                                         
                                     }
