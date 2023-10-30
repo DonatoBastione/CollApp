@@ -19,6 +19,7 @@ presentationMode: Binding<PresentationMode>
     @State var nickname: String = ""
     @State var newTask: String = ""
     @State var secchio: String = ""
+    @State var selfoto: String = ""
     
     /*let images:[String] = ["noimage", "avatar1","avatar2","avatar3","avatar4","avatar5","avatar6","avatar7","avatar8","avatar9"]*/
     var fotine = ImageClass()
@@ -61,22 +62,23 @@ presentationMode: Binding<PresentationMode>
                         })
                     
                     VStack {
-                        ScrollView (.horizontal) {
-                            LazyHStack{
+                            TabView(selection: $selfoto){
                                 ForEach(fotine.pupazzetti){pupazzetti in
                                     Image (pupazzetti.imageAvatar)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: 170.0, height: 150.0)
                                         .clipped()
+                                        .tag(pupazzetti.imageAvatar)
                                 }
                             }
-                            .scrollTargetLayout()
-                            
-                        }
-                        .mask(Rectangle())
-                        .scrollTargetBehavior(.viewAligned)
-                        .safeAreaPadding(.horizontal, 115)
+                            .frame(height: 130)
+                            .tabViewStyle(PageTabViewStyle())
+                            /*.mask(Rectangle())
+                            .scrollTargetBehavior(.viewAligned)
+                            .safeAreaPadding(.horizontal, 115)*/
+                        
+                        
                         
                         TextField("NickName", text: $nickname)
                             .padding([.leading,], 120.0)
@@ -91,7 +93,7 @@ presentationMode: Binding<PresentationMode>
                         
                         
                         
-                    } .padding(.top, 50.0)
+                    } .padding(.top, 100.0)
                     
                     
                     
