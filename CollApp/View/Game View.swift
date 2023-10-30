@@ -31,7 +31,7 @@ Image("BackGround")
                 .ignoresSafeArea()
                 .opacity(0.5)
                 .scaledToFill()
-                NavigationLink(destination: FinalView(pawn: pawn)) {
+                NavigationLink(destination: FinalView(pawn: pawn, losers: "test")) {
                     
                     ZStack{
                         Image ("Ellipse 4")
@@ -197,7 +197,7 @@ Image("BackGround")
         }
     func FindNextTaskP1 (number: Int, index: Int) -> Int {
         if (index >= taskViewModel.tasks.count){
-            taskPlayer1 = "Fine!"
+            taskPlayer1 = "Well Done!"
         }else if (taskViewModel.tasks[index].player == number && taskViewModel.tasks[index].done2 == false){
             taskPlayer1 = taskViewModel.tasks[index].text
             taskViewModel.tasks[index].done2 = true
@@ -211,7 +211,7 @@ Image("BackGround")
     }
     func FindNextTaskP2 (number: Int, index: Int) -> Int {
         if (index >= taskViewModel.tasks.count){
-            taskPlayer2 = "Fine!"
+            taskPlayer2 = "Well Done!"
         }else if (taskViewModel.tasks[index].player == number && taskViewModel.tasks[index].done2 == false){
             taskPlayer2 = taskViewModel.tasks[index].text
             taskViewModel.tasks[index].done2 = true
@@ -225,7 +225,7 @@ Image("BackGround")
     }
     func FindNextTaskP3 (number: Int, index: Int) -> Int {
         if (index >= taskViewModel.tasks.count){
-            taskPlayer3 = "Fine!"
+            taskPlayer3 = "Well Done!"
         }else if (taskViewModel.tasks[index].player == number && taskViewModel.tasks[index].done2 == false){
             taskPlayer3 = taskViewModel.tasks[index].text
             taskViewModel.tasks[index].done2 = true
@@ -239,7 +239,7 @@ Image("BackGround")
     }
     func FindNextTaskP4 (number: Int, index: Int) -> Int {
         if (index >= taskViewModel.tasks.count){
-            taskPlayer4 = "Fine!"
+            taskPlayer4 = "Well Done!"
         }else if (taskViewModel.tasks[index].player == number && taskViewModel.tasks[index].done2 == false){
             taskPlayer4 = taskViewModel.tasks[index].text
             taskViewModel.tasks[index].done2 = true
