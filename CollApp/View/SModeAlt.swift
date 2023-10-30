@@ -62,13 +62,14 @@ presentationMode: Binding<PresentationMode>
                         })
                     
                     VStack {
-                            TabView {
+                            TabView(selection: $selfoto){
                                 ForEach(fotine.pupazzetti){pupazzetti in
                                     Image (pupazzetti.imageAvatar)
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
                                         .frame(width: 170.0, height: 150.0)
                                         .clipped()
+                                        .tag(pupazzetti.imageAvatar)
                                 }
                             }
                             .frame(height: 130)
