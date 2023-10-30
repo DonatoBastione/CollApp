@@ -70,7 +70,6 @@ presentationMode: Binding<PresentationMode>
                                         .frame(width: 170.0, height: 150.0)
                                         .clipped()
                                         .tag(pupazzetti.imageAvatar)
-                                        .padding(.bottom,2)
                                 }
                             }
                             .frame(height: 130)
