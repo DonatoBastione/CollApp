@@ -107,7 +107,7 @@ presentationMode: Binding<PresentationMode>
                         
                         Text("Tasks:")
                             .font(.title)
-                          
+                        
                             .padding(.top)
                         
                         ForEach(viewModel.tasks) {tasks in
