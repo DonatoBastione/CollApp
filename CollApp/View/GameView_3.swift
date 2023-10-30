@@ -8,6 +8,20 @@
 import SwiftUI
 
 struct GameView_3: View {
+    
+    @StateObject var taskViewModel: TaskViewModel
+    @StateObject var teamViewModel: TeamMemberViewModel
+    
+    var pawn: String
+    
+    @State var taskPlayer1 = "Tap to start!"
+    @State var taskPlayer2 = "Tap to start!"
+    @State var taskPlayer3 = "Tap to start!"
+    @State var indexP1: Int = 0
+    @State var indexP2: Int = 0
+    @State var indexP3: Int = 0
+
+    
     var body: some View {
         NavigationStack {
             ZStack{
@@ -21,7 +35,7 @@ Image("BackGround")
                             
                             
                      
-                    NavigationLink(destination: FinalView()) {
+                    NavigationLink(destination: FinalView(pawn: pawn)) {
                         
                         ZStack{
                             Image ("Ellipse 4")
@@ -54,16 +68,18 @@ Image("BackGround")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                             
-                            Text ("Player1")
+                            Text (teamViewModel.teamMember[0].name)
                             ZStack{
-                                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                                Button(action: {
+                                    indexP1 = FindNextTaskP1(number: 1, index: indexP1)
+                                }, label: {
                                     ZStack{
                                         Image("Ellipse 23")
                                             .resizable()
                                             .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                                             .padding(.top,20)
                                             .padding(.bottom,-10)
-                                        Text("Task:\nDefine the big ideal")
+                                        Text(taskPlayer1)
                                             .foregroundColor(.black)
                                             .padding(.top)
                                     }
@@ -81,18 +97,20 @@ Image("BackGround")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                             
-                            Text ("Player3")
+                            Text (teamViewModel.teamMember[1].name)
                             ZStack{
                                 
                                 ZStack{
-                                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                                    Button(action: {
+                                        indexP2 = FindNextTaskP2(number: 2, index: indexP2)
+                                    }, label: {
                                         ZStack{
                                             Image("Ellipse 25")
                                                 .resizable()
                                                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                                                 .padding(.top,20)
                                                 .padding(.bottom,-10)
-                                            Text("Task:\nDefine the big ideal")
+                                            Text(taskPlayer2)
                                                 .foregroundColor(.black)
                                                 .padding(.top)
                                         }
@@ -112,16 +130,18 @@ Image("BackGround")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                             
-                            Text ("Player2")
+                            Text (teamViewModel.teamMember[2].name)
                             ZStack{
-                                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                                Button(action: {
+                                    indexP3 = FindNextTaskP3(number: 3, index: indexP3)
+                                }, label: {
                                     ZStack{
                                         Image("Ellipse 24")
                                             .resizable()
                                             .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                                             .padding(.top,20)
                                             .padding(.bottom,-10)
-                                        Text("Task:\nDefine the essential question")
+                                        Text(taskPlayer3)
                                             .foregroundColor(.black)
                                             .padding(.top)
                                     }
@@ -149,10 +169,53 @@ Image("BackGround")
             
             
         }
+        
+    }
+    func FindNextTaskP1 (number: Int, index: Int) -> Int {
+        if (index >= taskViewModel.tasks.count){
+            taskPlayer1 = "Fine!"
+        }else if (taskViewModel.tasks[index].player == number && taskViewModel.tasks[index].done2 == false){
+            taskPlayer1 = taskViewModel.tasks[index].text
+            taskViewModel.tasks[index].done2 = true
+            return index+1
+        }else{
+            return FindNextTaskP1(number: number, index: index+1)
+        }
+        return 0
+        
+        
+    }
+    func FindNextTaskP2 (number: Int, index: Int) -> Int {
+        if (index >= taskViewModel.tasks.count){
+            taskPlayer2 = "Fine!"
+        }else if (taskViewModel.tasks[index].player == number && taskViewModel.tasks[index].done2 == false){
+            taskPlayer2 = taskViewModel.tasks[index].text
+            taskViewModel.tasks[index].done2 = true
+            return index+1
+        }else{
+            return FindNextTaskP2(number: number, index: index+1)
+        }
+        return 0
+        
+        
+    }
+    func FindNextTaskP3 (number: Int, index: Int) -> Int {
+        if (index >= taskViewModel.tasks.count){
+            taskPlayer3 = "Fine!"
+        }else if (taskViewModel.tasks[index].player == number && taskViewModel.tasks[index].done2 == false){
+            taskPlayer3 = taskViewModel.tasks[index].text
+            taskViewModel.tasks[index].done2 = true
+            return index+1
+        }else{
+            return FindNextTaskP3(number: number, index: index+1)
+        }
+        return 0
+        
+        
     }
 }
 
 #Preview {
-    GameView_3()
+    GameView_3(taskViewModel: TaskViewModel(), teamViewModel: TeamMemberViewModel(),pawn: "Lavorare")
 }
 
