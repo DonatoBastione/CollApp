@@ -17,12 +17,10 @@ presentationMode: Binding<PresentationMode>
     @StateObject var teamViewModel: TeamMemberViewModel
     var totalPlayers: Int
     var thisPlayer: Int
-    var pawn: String
     
     @State var nickname: String = ""
     @State var newTask: String = ""
     var fotine = ImageClass()
-    @State var isActive = false
     
     
     var body: some View {
@@ -42,7 +40,7 @@ presentationMode: Binding<PresentationMode>
                                     }
                                     ZStack{
                                     if(thisPlayer != totalPlayers){
-                                        NavigationLink(destination: TeamModePlayer(taskViewModel: taskViewModel, teamViewModel: teamViewModel, totalPlayers: totalPlayers, thisPlayer: thisPlayer+1, pawn: pawn)
+                                        NavigationLink(destination: TeamModePlayer(taskViewModel: taskViewModel, teamViewModel: teamViewModel, totalPlayers: totalPlayers, thisPlayer: thisPlayer+1)
                                                         ) {
                                             Text("Next")
                                             
@@ -52,7 +50,7 @@ presentationMode: Binding<PresentationMode>
                                         .padding(.leading, 250.0)
                                     }else{
                                         if(totalPlayers == 4){
-                                            NavigationLink(destination: Game_View(taskViewModel: taskViewModel, teamViewModel: teamViewModel, pawn: pawn)) {
+                                            NavigationLink(destination: Game_View()) {
                                                 Text("Next")
                                                 
                                             }.simultaneousGesture(TapGesture().onEnded{
@@ -61,7 +59,7 @@ presentationMode: Binding<PresentationMode>
 
                                             .padding(.leading, 250.0)
                                         }else if(totalPlayers == 3){
-                                            NavigationLink(destination: GameView_3(taskViewModel: taskViewModel, teamViewModel: teamViewModel, pawn: pawn)) {
+                                            NavigationLink(destination: GameView_3()) {
                                                 Text("Next")
                                                 
                                             }.simultaneousGesture(TapGesture().onEnded{
@@ -70,7 +68,7 @@ presentationMode: Binding<PresentationMode>
 
                                             .padding(.leading, 250.0)
                                         }else{
-                                            NavigationLink(destination: GameView_2(taskViewModel: taskViewModel, teamViewModel: teamViewModel, pawn: pawn)) {
+                                            NavigationLink(destination: GameView_2(taskViewModel: taskViewModel, teamViewModel: teamViewModel)) {
                                                 Text("Next")
                                                 
                                             }.simultaneousGesture(TapGesture().onEnded{
@@ -168,7 +166,7 @@ presentationMode: Binding<PresentationMode>
                         
                         
                         
-                       
+                        
                     }
                 }
                 
@@ -184,6 +182,6 @@ presentationMode: Binding<PresentationMode>
     }
 #Preview {
     TeamModePlayer(taskViewModel: TaskViewModel()
-, teamViewModel: TeamMemberViewModel(), totalPlayers: 3, thisPlayer: 1, pawn: "Lavorare")
+, teamViewModel: TeamMemberViewModel(), totalPlayers: 3, thisPlayer: 1)
 }
 

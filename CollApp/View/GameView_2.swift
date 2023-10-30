@@ -15,12 +15,10 @@ struct GameView_2: View {
     
     @StateObject var taskViewModel: TaskViewModel
     @StateObject var teamViewModel: TeamMemberViewModel
-    var pawn: String
-    
     @State var taskPlayer1 = "Tap to start!"
     @State var taskPlayer2 = "Tap to start!"
     @State var indexP1: Int = 0
-    @State var indexP2: Int = 0
+    @State var indexP2: Int = 1
     
     
     var body: some View {
@@ -33,7 +31,7 @@ struct GameView_2: View {
                     .opacity(0.5)
                     .scaledToFill()
                 
-                NavigationLink(destination: FinalView(pawn: pawn)) {
+                NavigationLink(destination: FinalView()) {
                     
                     ZStack{
                         Image ("Ellipse 4")
@@ -174,6 +172,6 @@ struct GameView_2: View {
 
 
 #Preview {
-    GameView_2(taskViewModel: TaskViewModel(), teamViewModel: TeamMemberViewModel(),pawn: "Lavorare")
+    GameView_2(taskViewModel: TaskViewModel(), teamViewModel: TeamMemberViewModel())
 }
 

@@ -27,7 +27,7 @@ struct TeamMode_alt: View {
             
             ZStack{
                 
-                NavigationLink(destination: TeamModePlayer(taskViewModel: taskViewModel, teamViewModel: teamViewModel, totalPlayers: playerNumber, thisPlayer: 1, pawn: pawntemp)) {
+                NavigationLink(destination: TeamModePlayer(taskViewModel: taskViewModel, teamViewModel: teamViewModel, totalPlayers: playerNumber, thisPlayer: 1)) {
                     Text("Next")
                     
                 }
@@ -84,7 +84,7 @@ struct TeamMode_alt: View {
                                             
                                         }
                                         )
-                                        NavigationLink(destination: TeamModePlayer(taskViewModel: taskViewModel, teamViewModel: teamViewModel, totalPlayers: playerNumber, thisPlayer: 1, pawn: pawntemp)) {
+                                        NavigationLink(destination: TeamModePlayer(taskViewModel: taskViewModel, teamViewModel: teamViewModel, totalPlayers: playerNumber, thisPlayer: 1)) {
                                             Text("Next")
                                             
                                         }

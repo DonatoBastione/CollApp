@@ -8,12 +8,7 @@
 import SwiftUI
 
 struct FinalView: View {
-    
-    var pawn: String
-    
     var body: some View {
-            
-        
         
             NavigationStack {
                 
@@ -65,7 +60,7 @@ struct FinalView: View {
                             Text("Bartolomeo")
                             .padding(.bottom,190)
                      
-                        Text("\nYou didn’t complete the task\nThe pawn is \(pawn)")
+                        Text("\nYou didn’t complete the task\nDrive your friends to go shopping")
                             .font(.subheadline)
                             .frame(width: 250, height: 150)
                       
@@ -120,5 +115,5 @@ struct FinalView: View {
 }
 
 #Preview {
-    FinalView(pawn: "lavorare")
+    FinalView()
 }
