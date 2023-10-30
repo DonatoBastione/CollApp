@@ -21,6 +21,7 @@ presentationMode: Binding<PresentationMode>
     @State var secchio: String = ""
     @State var selfoto: String = ""
     
+    
     /*let images:[String] = ["noimage", "avatar1","avatar2","avatar3","avatar4","avatar5","avatar6","avatar7","avatar8","avatar9"]*/
     var fotine = ImageClass()
     
@@ -111,6 +112,10 @@ presentationMode: Binding<PresentationMode>
                             HStack{
                                 CheckListView(checked: tasks.done)
                                 Text(tasks.text)
+                                
+                                Button(action: {}, label: {
+                                    Image(systemName: "trash")
+                                })
                             }
                         }
                         
@@ -134,6 +139,7 @@ presentationMode: Binding<PresentationMode>
                                     if(newTask != ""){
                                         viewModel.tasks.append(Task(text: newTask))
                                         newTask = ""
+                                        
                                     }
                                 }
                             
