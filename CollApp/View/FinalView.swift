@@ -66,7 +66,7 @@ struct FinalView: View {
                             Text(losers)
                             .padding(.bottom,190)
                      
-                        Text("\nYou didn’t complete the task\nThe pawn is \(pawn)")
+                        Text("\nIf you didn’t complete the task,\nThe pawn is \(pawn)")
                             .font(.subheadline)
                             .frame(width: 250, height: 150)
                       

@@ -107,9 +107,7 @@ struct GameView_2: View {
                     }
 
                 }else {
-                    NavigationLink(destination:FinalView(pawn: pawn, losers: "Everybody completed their tasks"
-                                                         
-                                                        )) {
+                    NavigationLink(destination:FinalView(pawn: pawn, losers: "Everybody completed their tasks")) {
                         
                         ZStack{
                             Image ("Ellipse 4")

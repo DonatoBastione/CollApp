@@ -20,6 +20,8 @@ struct GameView_3: View {
     @State var indexP1: Int = 0
     @State var indexP2: Int = 0
     @State var indexP3: Int = 0
+    
+    var spazio = ", "
 
     
     var body: some View {
@@ -57,6 +59,145 @@ Image("BackGround")
                         }
                     }
                     
+                }else if(taskPlayer1 != "Well Done!" && taskPlayer2 != "Well Done!" && taskPlayer3 == "Well Done!"){
+                    NavigationLink(destination: FinalView(pawn: pawn, losers: "\(teamViewModel.teamMember[0].name)\(spazio)\(teamViewModel.teamMember[1].name)")) {
+                        
+                        ZStack{
+                            Image ("Ellipse 4")
+                                .resizable()
+                                .frame(width: 110, height: 110)
+                                .padding(.top,UIScreen.main.bounds.height/60)
+                                .padding(.bottom,UIScreen.main.bounds.width/60)
+                                .padding(.leading,UIScreen.main.bounds.width/60)
+                                .padding(.trailing,UIScreen.main.bounds.width/60)
+                            Text("STOP")
+                                .font(.title)
+                                .bold()
+                                .italic()
+                                .foregroundColor(.white)
+                                .padding(.top,UIScreen.main.bounds.height/60)
+                                .padding(.bottom,UIScreen.main.bounds.width/60)
+                                .padding(.leading,UIScreen.main.bounds.width/60)
+                                .padding(.trailing,UIScreen.main.bounds.width/60)
+                        }
+                    }
+                }else if(taskPlayer1 != "Well Done!" && taskPlayer2 == "Well Done!" && taskPlayer3 != "Well Done!"){
+                    NavigationLink(destination: FinalView(pawn: pawn, losers: "\(teamViewModel.teamMember[0].name)\(spazio)\(teamViewModel.teamMember[2].name)")) {
+                        
+                        ZStack{
+                            Image ("Ellipse 4")
+                                .resizable()
+                                .frame(width: 110, height: 110)
+                                .padding(.top,UIScreen.main.bounds.height/60)
+                                .padding(.bottom,UIScreen.main.bounds.width/60)
+                                .padding(.leading,UIScreen.main.bounds.width/60)
+                                .padding(.trailing,UIScreen.main.bounds.width/60)
+                            Text("STOP")
+                                .font(.title)
+                                .bold()
+                                .italic()
+                                .foregroundColor(.white)
+                                .padding(.top,UIScreen.main.bounds.height/60)
+                                .padding(.bottom,UIScreen.main.bounds.width/60)
+                                .padding(.leading,UIScreen.main.bounds.width/60)
+                                .padding(.trailing,UIScreen.main.bounds.width/60)
+                        }
+                    }
+                }else if(taskPlayer1 == "Well Done!" && taskPlayer2 != "Well Done!" && taskPlayer3 != "Well Done!"){
+                    NavigationLink(destination: FinalView(pawn: pawn, losers: "\(teamViewModel.teamMember[1].name)\(spazio)\(teamViewModel.teamMember[2].name)")) {
+                        
+                        ZStack{
+                            Image ("Ellipse 4")
+                                .resizable()
+                                .frame(width: 110, height: 110)
+                                .padding(.top,UIScreen.main.bounds.height/60)
+                                .padding(.bottom,UIScreen.main.bounds.width/60)
+                                .padding(.leading,UIScreen.main.bounds.width/60)
+                                .padding(.trailing,UIScreen.main.bounds.width/60)
+                            Text("STOP")
+                                .font(.title)
+                                .bold()
+                                .italic()
+                                .foregroundColor(.white)
+                                .padding(.top,UIScreen.main.bounds.height/60)
+                                .padding(.bottom,UIScreen.main.bounds.width/60)
+                                .padding(.leading,UIScreen.main.bounds.width/60)
+                                .padding(.trailing,UIScreen.main.bounds.width/60)
+                        }
+                    }
+                }else if (taskPlayer1 != "Well Done!" && taskPlayer2 == "Well Done!" && taskPlayer3 == "Well Done!"){
+                    NavigationLink(destination:FinalView(pawn: pawn, losers: teamViewModel.teamMember[0].name
+                                                         
+                                                        )) {
+                        
+                        ZStack{
+                            Image ("Ellipse 4")
+                                .resizable()
+                                .frame(width: 110, height: 110)
+                                .padding(.top,UIScreen.main.bounds.height/60)
+                                .padding(.bottom,UIScreen.main.bounds.width/60)
+                                .padding(.leading,UIScreen.main.bounds.width/60)
+                                .padding(.trailing,UIScreen.main.bounds.width/60)
+                            Text("STOP")
+                                .font(.title)
+                                .bold()
+                                .italic()
+                                .foregroundColor(.white)
+                                .padding(.top,UIScreen.main.bounds.height/60)
+                                .padding(.bottom,UIScreen.main.bounds.width/60)
+                                .padding(.leading,UIScreen.main.bounds.width/60)
+                                .padding(.trailing,UIScreen.main.bounds.width/60)
+                        }
+                    }
+                }else if(taskPlayer2 != "Well Done!" && taskPlayer1 == "Well Done!" && taskPlayer3 == "Well Done!"){
+                    NavigationLink(destination:FinalView(pawn: pawn, losers: teamViewModel.teamMember[1].name
+                                                         
+                                                        )) {
+                        
+                        ZStack{
+                            Image ("Ellipse 4")
+                                .resizable()
+                                .frame(width: 110, height: 110)
+                                .padding(.top,UIScreen.main.bounds.height/60)
+                                .padding(.bottom,UIScreen.main.bounds.width/60)
+                                .padding(.leading,UIScreen.main.bounds.width/60)
+                                .padding(.trailing,UIScreen.main.bounds.width/60)
+                            Text("STOP")
+                                .font(.title)
+                                .bold()
+                                .italic()
+                                .foregroundColor(.white)
+                                .padding(.top,UIScreen.main.bounds.height/60)
+                                .padding(.bottom,UIScreen.main.bounds.width/60)
+                                .padding(.leading,UIScreen.main.bounds.width/60)
+                                .padding(.trailing,UIScreen.main.bounds.width/60)
+                        }
+                    }
+
+                }else if(taskPlayer3 != "Well Done!" && taskPlayer1 == "Well Done!" && taskPlayer2 == "Well Done!"){
+                    NavigationLink(destination:FinalView(pawn: pawn, losers: teamViewModel.teamMember[2].name
+                                                         
+                                                        )) {
+                        
+                        ZStack{
+                            Image ("Ellipse 4")
+                                .resizable()
+                                .frame(width: 110, height: 110)
+                                .padding(.top,UIScreen.main.bounds.height/60)
+                                .padding(.bottom,UIScreen.main.bounds.width/60)
+                                .padding(.leading,UIScreen.main.bounds.width/60)
+                                .padding(.trailing,UIScreen.main.bounds.width/60)
+                            Text("STOP")
+                                .font(.title)
+                                .bold()
+                                .italic()
+                                .foregroundColor(.white)
+                                .padding(.top,UIScreen.main.bounds.height/60)
+                                .padding(.bottom,UIScreen.main.bounds.width/60)
+                                .padding(.leading,UIScreen.main.bounds.width/60)
+                                .padding(.trailing,UIScreen.main.bounds.width/60)
+                        }
+                    }
                 }else{
                     NavigationLink(destination: FinalView(pawn: pawn, losers: "Everybody completed their tasks")) {
                         
