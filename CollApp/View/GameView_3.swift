@@ -34,8 +34,8 @@ Image("BackGround")
                     
                             
                             
-                     
-                    NavigationLink(destination: FinalView(pawn: pawn)) {
+                if(taskPlayer1 != "Well Done!" && taskPlayer2 != "Well Done!" && taskPlayer3 != "Well Done!"){
+                    NavigationLink(destination: FinalView(pawn: pawn, losers: "Nobody completed their tasks")) {
                         
                         ZStack{
                             Image ("Ellipse 4")
@@ -57,7 +57,29 @@ Image("BackGround")
                         }
                     }
                     
-                
+                }else{
+                    NavigationLink(destination: FinalView(pawn: pawn, losers: "Everybody completed their tasks")) {
+                        
+                        ZStack{
+                            Image ("Ellipse 4")
+                                .resizable()
+                                .frame(width: 110, height: 110)
+                                .padding(.top,UIScreen.main.bounds.height/60)
+                                .padding(.bottom,UIScreen.main.bounds.width/60)
+                                .padding(.leading,UIScreen.main.bounds.width/60)
+                                .padding(.trailing,UIScreen.main.bounds.width/60)
+                            Text("STOP")
+                                .font(.title)
+                                .bold()
+                                .italic()
+                                .foregroundColor(.white)
+                                .padding(.top,UIScreen.main.bounds.height/60)
+                                .padding(.bottom,UIScreen.main.bounds.width/60)
+                                .padding(.leading,UIScreen.main.bounds.width/60)
+                                .padding(.trailing,UIScreen.main.bounds.width/60)
+                        }
+                    }
+                }
                 
                 
                 HStack{
@@ -173,7 +195,7 @@ Image("BackGround")
     }
     func FindNextTaskP1 (number: Int, index: Int) -> Int {
         if (index >= taskViewModel.tasks.count){
-            taskPlayer1 = "Fine!"
+            taskPlayer1 = "Well Done!"
         }else if (taskViewModel.tasks[index].player == number && taskViewModel.tasks[index].done2 == false){
             taskPlayer1 = taskViewModel.tasks[index].text
             taskViewModel.tasks[index].done2 = true
@@ -187,7 +209,7 @@ Image("BackGround")
     }
     func FindNextTaskP2 (number: Int, index: Int) -> Int {
         if (index >= taskViewModel.tasks.count){
-            taskPlayer2 = "Fine!"
+            taskPlayer2 = "Well Done!"
         }else if (taskViewModel.tasks[index].player == number && taskViewModel.tasks[index].done2 == false){
             taskPlayer2 = taskViewModel.tasks[index].text
             taskViewModel.tasks[index].done2 = true
@@ -201,7 +223,7 @@ Image("BackGround")
     }
     func FindNextTaskP3 (number: Int, index: Int) -> Int {
         if (index >= taskViewModel.tasks.count){
-            taskPlayer3 = "Fine!"
+            taskPlayer3 = "Well Done!"
         }else if (taskViewModel.tasks[index].player == number && taskViewModel.tasks[index].done2 == false){
             taskPlayer3 = taskViewModel.tasks[index].text
             taskViewModel.tasks[index].done2 = true

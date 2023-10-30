@@ -10,6 +10,7 @@ import SwiftUI
 struct FinalView: View {
     
     var pawn: String
+    var losers: String
     
     var body: some View {
             
@@ -62,7 +63,7 @@ struct FinalView: View {
                         
                         
                         
-                            Text("Bartolomeo")
+                            Text(losers)
                             .padding(.bottom,190)
                      
                         Text("\nYou didn’t complete the task\nThe pawn is \(pawn)")
@@ -120,5 +121,5 @@ struct FinalView: View {
 }
 
 #Preview {
-    FinalView(pawn: "lavorare")
+    FinalView(pawn: "lavorare", losers: "GianPasquale")
 }
