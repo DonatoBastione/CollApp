@@ -28,6 +28,7 @@ presentationMode: Binding<PresentationMode>
     
     var body: some View {
         
+        var i: Int = 0
         
         NavigationStack {
             
@@ -143,6 +144,14 @@ presentationMode: Binding<PresentationMode>
                                         
                                         Text("")
                                         Text(tasks.text)
+                                        Button(action: {
+                                            while taskViewModel.tasks[i].text != tasks.text || taskViewModel.tasks[i].player != tasks.player {
+                                                i = i+1
+                                            }
+                                            taskViewModel.tasks.remove(at: i)
+                                        }, label: {
+                                            Image(systemName: "trash")
+                                        })
                                     }
                                 }
                             }
